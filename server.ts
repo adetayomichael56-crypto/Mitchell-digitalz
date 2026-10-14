@@ -135,6 +135,10 @@ function injectPostMetadata(baseHtml: string, post: BlogPost): string {
 ${JSON.stringify(articleSchema, null, 2)}
     </script>
 `;
+  // Strip base canonical and og:url before injecting post-specific metadata
+  html = html.replace(/<link rel="canonical"[^>]*>/i, '');
+  html = html.replace(/<meta property="og:url"[^>]*>/i, '');
+
   html = html.replace('</head>', `${extraHead}</head>`);
 
   // Noscript fallback for pure text crawlers

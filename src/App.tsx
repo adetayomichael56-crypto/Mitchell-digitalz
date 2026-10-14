@@ -92,6 +92,30 @@ export default function App() {
     };
   }, []);
 
+  // Synchronize canonical and og:url tags across pages
+  useEffect(() => {
+    if (currentPage === 'blog') return; // Handled specifically by BlogPage component
+
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonical);
+    }
+    const targetUrl = currentPage === 'home'
+      ? 'https://mikky-digitalz.netlify.app/'
+      : `https://mikky-digitalz.netlify.app/${currentPage}`;
+    canonical.setAttribute('href', targetUrl);
+
+    let ogUrl = document.querySelector('meta[property="og:url"]');
+    if (!ogUrl) {
+      ogUrl = document.createElement('meta');
+      ogUrl.setAttribute('property', 'og:url');
+      document.head.appendChild(ogUrl);
+    }
+    ogUrl.setAttribute('content', targetUrl);
+  }, [currentPage]);
+
   // Fetch inquiries from backend
   const fetchInquiries = async () => {
     try {
