@@ -42,12 +42,12 @@ export const WhatsAppChatbot: React.FC = () => {
       
       {/* Expanded Chat Window */}
       {isOpen && (
-        <div className="mb-4 w-[340px] sm:w-[380px] bg-[#0c0e22] rounded-3xl border border-[#241d4a] shadow-2xl overflow-hidden flex flex-col max-h-[520px] animate-slide-up">
+        <div className="mb-4 w-[340px] sm:w-[380px] bg-[#070612] rounded-3xl border border-[#261d56] shadow-2xl overflow-hidden flex flex-col max-h-[520px] animate-slide-up">
           {/* Header */}
-          <div className="bg-gradient-to-r from-[#075E54] to-[#128C7E] p-4 text-white flex items-center justify-between shadow-md">
+          <div className="bg-gradient-to-r from-[#181145] via-[#211559] to-[#2e1966] p-4 text-white flex items-center justify-between shadow-md border-b border-[#261d56]">
             <div className="flex items-center gap-3">
               <div className="relative">
-                <div className="w-10 h-10 rounded-full bg-[#181533] border-2 border-white/20 p-0.5 overflow-hidden flex items-center justify-center">
+                <div className="w-10 h-10 rounded-full bg-[#130f2e] border-2 border-purple-400/40 p-0.5 overflow-hidden flex items-center justify-center">
                   <img
                     src="https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801863/My_real_logo_no_bg_uzbovb.png"
                     alt="Mitchell Adetayo"
@@ -55,13 +55,13 @@ export const WhatsAppChatbot: React.FC = () => {
                     referrerPolicy="no-referrer"
                   />
                 </div>
-                <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-[#075E54] rounded-full" />
+                <span className="absolute bottom-0 right-0 w-3 h-3 bg-emerald-400 border-2 border-[#181145] rounded-full" />
               </div>
 
               <div>
                 <h4 className="text-sm font-bold leading-tight">Mitchell Adetayo</h4>
-                <p className="text-[11px] text-emerald-100/90 flex items-center gap-1 font-medium">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
+                <p className="text-[11px] text-purple-200/90 flex items-center gap-1 font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span>Online • Direct WhatsApp Assistant</span>
                 </p>
               </div>
@@ -77,32 +77,32 @@ export const WhatsAppChatbot: React.FC = () => {
           </div>
 
           {/* Chat Messages */}
-          <div className="p-4 overflow-y-auto space-y-3 bg-[#080918] flex-1 text-xs">
+          <div className="p-4 overflow-y-auto space-y-3 bg-[#070612] flex-1 text-xs">
             <div className="text-center my-1">
-              <span className="px-3 py-1 rounded-full bg-[#181533] border border-[#241d4a] text-[10px] text-slate-400 font-semibold uppercase tracking-wider">
+              <span className="px-3 py-1 rounded-full bg-[#130f2e] border border-[#261d56] text-[10px] text-purple-300 font-semibold uppercase tracking-wider">
                 WhatsApp Direct Chat ({waPhone})
               </span>
             </div>
 
             <div className="flex items-start gap-2">
-              <div className="max-w-[85%] bg-[#151230] border border-[#241d4a] text-slate-200 p-3 rounded-2xl rounded-tl-xs shadow-xs space-y-1">
+              <div className="max-w-[85%] bg-[#130f2e] border border-[#261d56] text-slate-200 p-3 rounded-2xl rounded-tl-xs shadow-xs space-y-1">
                 <p className="leading-relaxed">
                   Hi there! 👋 I am Mitchell Adetayo. Ready to discuss your high-converting website build? Pick a shortcut below or send a custom question!
                 </p>
-                <span className="text-[9px] text-slate-500 block text-right">Just now</span>
+                <span className="text-[9px] text-slate-400 block text-right">Just now</span>
               </div>
             </div>
 
             {/* Quick Prompt Buttons */}
             <div className="space-y-1.5 pt-2">
-              <span className="text-[10px] uppercase font-bold text-slate-400 tracking-wider">
+              <span className="text-[10px] uppercase font-bold text-purple-400 tracking-wider">
                 Suggested Inquiries:
               </span>
               {quickPrompts.map((prompt, i) => (
                 <button
                   key={i}
                   onClick={() => handleQuickPrompt(prompt)}
-                  className="w-full text-left p-2.5 rounded-xl bg-[#181533] hover:bg-[#251540] border border-[#241d4a] hover:border-purple-500/50 text-slate-300 hover:text-white transition-all text-xs cursor-pointer"
+                  className="w-full text-left p-2.5 rounded-xl bg-[#0e0b24] hover:bg-[#1a143b] border border-[#261d56] hover:border-purple-500/70 text-slate-300 hover:text-white transition-all text-xs cursor-pointer"
                 >
                   {prompt}
                 </button>
@@ -111,17 +111,17 @@ export const WhatsAppChatbot: React.FC = () => {
           </div>
 
           {/* Input Footer */}
-          <form onSubmit={handleSubmit} className="p-3 bg-[#0f0d22] border-t border-[#241d4a] flex items-center gap-2">
+          <form onSubmit={handleSubmit} className="p-3 bg-[#0a081a] border-t border-[#261d56] flex items-center gap-2">
             <input
               type="text"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Type your WhatsApp message..."
-              className="flex-1 px-3 py-2 rounded-xl bg-[#181533] border border-[#241d4a] text-white text-xs focus:outline-none focus:border-emerald-500 placeholder:text-slate-500"
+              className="flex-1 px-3 py-2 rounded-xl bg-[#130f2e] border border-[#261d56] text-white text-xs focus:outline-none focus:border-purple-500 placeholder:text-slate-500"
             />
             <button
               type="submit"
-              className="p-2.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold transition-colors cursor-pointer"
+              className="p-2.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold transition-colors cursor-pointer shadow-md shadow-purple-600/30"
               title="Send to WhatsApp"
             >
               <Send className="w-3.5 h-3.5" />

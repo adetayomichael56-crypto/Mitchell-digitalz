@@ -206,11 +206,11 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#090a15] text-[#f1f5f9] flex flex-col font-sans selection:bg-[#7c3aed]/30 selection:text-white">
+    <div className="min-h-screen bg-[#070612] text-[#f1f5f9] flex flex-col font-sans selection:bg-purple-600 selection:text-white">
       
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed bottom-6 left-6 z-[100] p-4 rounded-2xl bg-[#101226]/95 border border-purple-500/50 text-white shadow-2xl backdrop-blur-md flex items-center gap-3 text-xs max-w-sm animate-fade-in">
+        <div className="fixed bottom-6 left-6 z-[100] p-4 rounded-2xl bg-[#13102b]/95 border border-purple-500/50 text-white shadow-2xl shadow-purple-950/50 backdrop-blur-md flex items-center gap-3 text-xs max-w-sm animate-fade-in">
           <Sparkles className="w-4 h-4 text-purple-400 shrink-0" />
           <span>{toastMessage}</span>
         </div>

@@ -33,10 +33,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
       />
 
       {/* Modal Dialog */}
-      <div className="relative z-10 w-full max-w-4xl bg-[#0f0d22] border border-[#241d4a] text-white rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div className="relative z-10 w-full max-w-4xl bg-[#0a081a] border border-[#261d56] text-white rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
         
         {/* Header Bar */}
-        <div className="p-5 sm:p-6 bg-[#181533] text-white flex items-center justify-between border-b border-[#241d4a] shrink-0">
+        <div className="p-5 sm:p-6 bg-[#120e2e] text-white flex items-center justify-between border-b border-[#261d56] shrink-0">
           <div className="flex items-center gap-2.5 flex-wrap">
             <span className="px-3 py-1 rounded-full bg-purple-600/20 text-xs font-semibold text-purple-400 border border-purple-500/30">
               {project.categoryLabel}
@@ -51,7 +51,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-[#0f0d22] hover:bg-[#241d4a] text-slate-300 transition-colors cursor-pointer"
+            className="p-2 rounded-full bg-[#0a081a] hover:bg-[#1a143b] text-slate-300 transition-colors cursor-pointer border border-[#261d56]"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -72,7 +72,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
           </div>
 
           {/* Hero Screenshot */}
-          <div className="relative rounded-2xl overflow-hidden bg-[#181533] border border-[#241d4a] aspect-16/9">
+          <div className="relative rounded-2xl overflow-hidden bg-[#130f2e] border border-[#261d56] aspect-16/9">
             <img
               src={project.fullScreenshotUrl || project.thumbnail}
               alt={project.title}
@@ -81,7 +81,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
             
-            <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row sm:items-center justify-between text-white text-xs font-medium bg-[#0f0d22]/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-[#241d4a] gap-2">
+            <div className="absolute bottom-4 left-4 right-4 flex flex-col sm:flex-row sm:items-center justify-between text-white text-xs font-medium bg-[#0a081a]/90 backdrop-blur-md px-4 py-2.5 rounded-xl border border-[#261d56] gap-2">
               <span className="text-slate-300">
                 Platform: <strong className="text-white">{project.platform}</strong>
               </span>
@@ -92,9 +92,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
           </div>
 
           {/* Client & Specs */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#181533] border border-[#241d4a] text-xs">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#130f2e] border border-[#261d56] text-xs">
             <div>
-              <span className="font-semibold uppercase tracking-wider text-slate-400 block mb-1">
+              <span className="font-semibold uppercase tracking-wider text-purple-400 block mb-1">
                 Client & Industry
               </span>
               <p className="text-sm font-semibold text-white">
@@ -102,10 +102,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               </p>
             </div>
             <div>
-              <span className="font-semibold uppercase tracking-wider text-slate-400 block mb-1">
+              <span className="font-semibold uppercase tracking-wider text-purple-400 block mb-1">
                 Website Domain
               </span>
-              <p className="text-sm font-mono text-purple-400">
+              <p className="text-sm font-mono text-purple-300">
                 {project.websiteDomain}
               </p>
             </div>
@@ -113,7 +113,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* Before & After (if present) */}
           {project.beforeAfter && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#151230] border border-[#241d4a]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5 rounded-2xl bg-[#130f2e] border border-[#261d56]">
               <div className="space-y-1">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-rose-400">
                   Before Engagement:
@@ -131,7 +131,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* Testimonial Quote (if present) */}
           {project.testimonial && (
-            <div className="p-6 rounded-2xl bg-[#181533] border border-purple-500/30 relative">
+            <div className="p-6 rounded-2xl bg-[#130f2e] border border-purple-500/30 relative">
               <Quote className="w-8 h-8 text-purple-600/30 mb-2" />
               <p className="text-sm text-slate-200 italic mb-3 leading-relaxed">
                 "{project.testimonial.quote}"
@@ -144,7 +144,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* Challenge & Solution */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-5 rounded-2xl bg-[#181533] border border-[#241d4a] space-y-2">
+            <div className="p-5 rounded-2xl bg-[#130f2e] border border-[#261d56] space-y-2">
               <h3 className="text-xs font-bold uppercase tracking-wider text-purple-400">
                 The Challenge
               </h3>
@@ -153,7 +153,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
               </p>
             </div>
 
-            <div className="p-5 rounded-2xl bg-[#181533] border border-[#241d4a] space-y-2">
+            <div className="p-5 rounded-2xl bg-[#130f2e] border border-[#261d56] space-y-2">
               <h3 className="text-xs font-bold uppercase tracking-wider text-emerald-400">
                 The Engineering Solution
               </h3>
@@ -165,7 +165,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
 
           {/* Deliverables List */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-purple-400 mb-3">
               Key Deliverables
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
@@ -179,7 +179,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({
           </div>
 
           {/* Bottom Action Footer */}
-          <div className="pt-6 border-t border-[#241d4a] flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="pt-6 border-t border-[#261d56] flex flex-col sm:flex-row items-center justify-between gap-4">
             <span className="text-xs text-slate-400">
               Reference code: <strong className="text-purple-400 font-mono">#{project.id}</strong>
             </span>

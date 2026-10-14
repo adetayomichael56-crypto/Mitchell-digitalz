@@ -428,6 +428,12 @@ async function startServer() {
     }
   });
 
+  // Google Search Console verification endpoints
+  app.get(['/googlee63b711c38e98de3.html', '/googlee63b711c38e98de3*.html'], (_req: Request, res: Response) => {
+    res.setHeader('Content-Type', 'text/html; charset=utf-8');
+    res.send('google-site-verification: googlee63b711c38e98de3.html');
+  });
+
   // Setup Vite development server or production static serving
   if (!isProduction) {
     const vite = await createViteServer({

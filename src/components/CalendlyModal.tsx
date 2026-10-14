@@ -18,9 +18,9 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
       />
 
       {/* Dialog */}
-      <div className="relative z-10 w-full max-w-4xl bg-[#0f0d22] border border-[#241d4a] text-white rounded-3xl shadow-2xl overflow-hidden flex flex-col h-[90vh] max-h-[820px]">
+      <div className="relative z-10 w-full max-w-4xl bg-[#0a081a] border border-[#261d56] text-white rounded-3xl shadow-2xl overflow-hidden flex flex-col h-[90vh] max-h-[820px]">
         {/* Header */}
-        <div className="p-4 sm:p-5 bg-[#181533] text-white flex items-center justify-between border-b border-[#241d4a] shrink-0">
+        <div className="p-4 sm:p-5 bg-[#120e2e] text-white flex items-center justify-between border-b border-[#261d56] shrink-0">
           <div className="flex items-center gap-3">
             <div className="w-9 h-9 rounded-full bg-purple-600/20 text-purple-400 border border-purple-500/30 flex items-center justify-center">
               <Calendar className="w-5 h-5" />
@@ -37,7 +37,7 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
 
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-[#0f0d22] hover:bg-[#241d4a] text-slate-300 transition-colors cursor-pointer"
+            className="p-2 rounded-full bg-[#0a081a] hover:bg-[#1a143b] text-slate-300 transition-colors cursor-pointer border border-[#261d56]"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />

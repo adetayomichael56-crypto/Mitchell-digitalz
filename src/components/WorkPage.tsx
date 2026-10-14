@@ -42,7 +42,10 @@ export const WorkPage: React.FC<WorkPageProps> = ({
   const featuredProject = PROJECTS[0]; // Cyrion / Marcus Vance
 
   return (
-    <div className="w-full py-12 md:py-16 bg-[#090a15] text-[#f1f5f9]">
+    <div className="w-full py-12 md:py-16 bg-[#070612] text-[#f1f5f9] relative overflow-hidden">
+      {/* Background ambient purple glow */}
+      <div className="absolute top-20 right-1/4 w-[600px] h-[350px] bg-purple-600/10 blur-[130px] pointer-events-none rounded-full -z-10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -51,18 +54,18 @@ export const WorkPage: React.FC<WorkPageProps> = ({
             Mikky Digitalz Portfolio Showcase
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mt-2 mb-4">
-            Featured Projects & Mockups.
+            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-purple-200">Projects & Mockups</span>.
           </h1>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
             Real websites designed and engineered by Mitchell Adetayo (Mikky Digitalz). Hover over any website screenshot below to see the interactive full page scroll effect, or switch to mockup view!
           </p>
         </div>
 
         {/* Featured Case Study Hero Banner */}
-        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-[#0f0d22] border border-[#241d4a] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl">
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-[#0e0b24] border border-[#2c2263] text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
           <div className="space-y-2 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-semibold border border-emerald-500/30">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold border border-purple-500/30">
+              <Sparkles className="w-3.5 h-3.5 text-purple-400" />
               <span>Featured Performance Case Study</span>
             </div>
             <h2 className="text-xl sm:text-2xl font-bold text-white">
@@ -76,7 +79,7 @@ export const WorkPage: React.FC<WorkPageProps> = ({
           <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
             <button
               onClick={() => onSelectProject(featuredProject)}
-              className="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-xs sm:text-sm font-bold transition-colors cursor-pointer flex items-center gap-2 shadow-lg shadow-purple-600/30"
+              className="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-xs sm:text-sm font-bold transition-all cursor-pointer flex items-center gap-2 shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50"
             >
               <span>Read Case Study</span>
               <ArrowRight className="w-4 h-4" />
@@ -84,7 +87,7 @@ export const WorkPage: React.FC<WorkPageProps> = ({
 
             <button
               onClick={onOpenCalendly}
-              className="px-6 py-3 rounded-full bg-[#181533] hover:bg-[#241d4a] border border-[#241d4a] text-slate-200 text-xs sm:text-sm font-semibold transition-colors cursor-pointer flex items-center gap-2"
+              className="px-6 py-3 rounded-full bg-[#130f2e] hover:bg-[#1a143b] border border-[#261d56] text-slate-200 text-xs sm:text-sm font-semibold transition-colors cursor-pointer flex items-center gap-2"
             >
               <Calendar className="w-4 h-4 text-purple-400" />
               <span>Book Call</span>
@@ -109,8 +112,8 @@ export const WorkPage: React.FC<WorkPageProps> = ({
                   onClick={() => setActiveCategory(cat.id)}
                   className={`px-4 py-2 rounded-full text-xs font-medium transition-all whitespace-nowrap cursor-pointer shrink-0 ${
                     isActive
-                      ? 'bg-purple-600 text-white shadow-md font-semibold'
-                      : 'bg-[#0f0d22] text-slate-300 border border-[#241d4a] hover:bg-[#181533] hover:text-white'
+                      ? 'bg-purple-600 text-white shadow-xl shadow-purple-600/35 font-bold'
+                      : 'bg-[#0e0b24] text-slate-300 border border-[#261d56] hover:bg-[#130f2e] hover:border-purple-500/40 hover:text-white'
                   }`}
                 >
                   {cat.label}
@@ -120,7 +123,7 @@ export const WorkPage: React.FC<WorkPageProps> = ({
           </div>
 
           {/* View Mode Toggle */}
-          <div className="flex items-center gap-1 p-1 bg-[#0f0d22] border border-[#241d4a] rounded-full shrink-0">
+          <div className="flex items-center gap-1 p-1 bg-[#0e0b24] border border-[#261d56] rounded-full shrink-0">
             <button
               onClick={() => setViewMode('scroll')}
               className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-full text-xs font-semibold transition-all cursor-pointer ${
@@ -153,10 +156,10 @@ export const WorkPage: React.FC<WorkPageProps> = ({
             <div
               key={project.id}
               onClick={() => onSelectProject(project)}
-              className="group bg-[#101226] rounded-2xl border border-[#1e2442] overflow-hidden navy-card-hover cursor-pointer flex flex-col justify-between"
+              className="group bg-[#0e0b24] rounded-2xl border border-[#261d56] hover:border-purple-500/50 overflow-hidden navy-card-hover cursor-pointer flex flex-col justify-between shadow-xl"
             >
               {/* Media Container */}
-              <div className="relative overflow-hidden bg-[#181533] border-b border-[#241d4a]">
+              <div className="relative overflow-hidden bg-[#130f2e] border-b border-[#261d56]">
                 {viewMode === 'scroll' ? (
                   <div className="website-scroll-container">
                     <img
@@ -165,7 +168,7 @@ export const WorkPage: React.FC<WorkPageProps> = ({
                       className="website-scroll-img"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent pointer-events-none" />
                   </div>
                 ) : (
                   <div className="aspect-16/10 overflow-hidden">
@@ -179,12 +182,12 @@ export const WorkPage: React.FC<WorkPageProps> = ({
                 )}
 
                 {/* Overlaid badges */}
-                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0f0d22]/90 border border-purple-500/30 text-purple-300 text-[11px] font-semibold backdrop-blur-md">
+                <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-[#0a081a]/90 border border-purple-500/30 text-purple-300 text-[11px] font-semibold backdrop-blur-md">
                   {project.categoryLabel}
                 </div>
 
                 {project.metricsHighlight && (
-                  <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-emerald-950/90 border border-emerald-500/40 text-emerald-300 text-[11px] font-bold backdrop-blur-md">
+                  <div className="absolute top-3 right-3 px-2.5 py-1 rounded-full bg-purple-950/90 border border-purple-500/40 text-purple-200 text-[11px] font-bold backdrop-blur-md">
                     {project.metricsHighlight}
                   </div>
                 )}
@@ -193,15 +196,15 @@ export const WorkPage: React.FC<WorkPageProps> = ({
               {/* Information */}
               <div className="p-6 flex-1 flex flex-col justify-between">
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-purple-400 transition-colors">
+                  <h3 className="text-lg font-bold text-white mb-1.5 group-hover:text-purple-300 transition-colors">
                     {project.title}
                   </h3>
-                  <p className="text-xs text-slate-400 leading-relaxed line-clamp-2 mb-4">
+                  <p className="text-xs text-slate-300 leading-relaxed line-clamp-2 mb-4">
                     {project.tagline}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#1e2442] flex items-center justify-between text-xs font-semibold text-purple-400">
+                <div className="pt-4 border-t border-[#261d56] flex items-center justify-between text-xs font-semibold text-purple-400">
                   <span className="truncate max-w-[160px]">Metric: {project.result}</span>
                   <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                     View Case Study <ArrowRight className="w-3.5 h-3.5" />
@@ -213,17 +216,17 @@ export const WorkPage: React.FC<WorkPageProps> = ({
         </div>
 
         {/* Bottom Contact Callout */}
-        <div className="mt-20 p-8 sm:p-10 rounded-3xl bg-[#0f0d22] border border-[#241d4a] text-center space-y-4">
+        <div className="mt-20 p-8 sm:p-10 rounded-3xl bg-[#0e0b24] border border-[#2c2263] text-center space-y-4 shadow-2xl">
           <h3 className="text-xl sm:text-2xl font-bold text-white">
             Want a website engineered like these?
           </h3>
-          <p className="text-xs sm:text-sm text-slate-400 max-w-lg mx-auto">
+          <p className="text-xs sm:text-sm text-slate-300 max-w-lg mx-auto">
             Book a 20-minute strategy consultation or submit a direct inquiry with your project requirements.
           </p>
           <div className="pt-2 flex justify-center gap-3">
             <button
               onClick={() => onOpenContact()}
-              className="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-xs sm:text-sm font-semibold transition-all shadow-lg shadow-purple-600/30 cursor-pointer"
+              className="px-6 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-xs sm:text-sm font-semibold transition-all shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50 cursor-pointer"
             >
               Start Project Inquiry
             </button>

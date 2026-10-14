@@ -15,28 +15,31 @@ html {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090a15;
+  background: #070612;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e2442;
+  background: #251e4d;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #8b5cf6;
 }
 
+.purple-glow,
 .navy-glow {
-  box-shadow: 0 12px 32px -8px #8b5cf659;
+  box-shadow: 0 12px 36px -8px rgba(139, 92, 246, 0.45);
 }
 
+.purple-card-hover,
 .navy-card-hover {
   transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
 }
 
+.purple-card-hover:hover,
 .navy-card-hover:hover {
   border-color: #8b5cf6;
   transform: translateY(-4px);
-  box-shadow: 0 16px 36px -8px #8b5cf64d;
+  box-shadow: 0 18px 40px -10px rgba(139, 92, 246, 0.35);
 }
 
 .website-scroll-container {

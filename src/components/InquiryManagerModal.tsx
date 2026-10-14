@@ -94,13 +94,13 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-slate-950/85 backdrop-blur-md">
-      <div className="relative w-full max-w-6xl h-[90vh] bg-[#0b0f17] border border-slate-800 rounded-3xl shadow-2xl flex flex-col overflow-hidden">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 bg-black/80 backdrop-blur-md">
+      <div className="relative w-full max-w-6xl h-[90vh] bg-[#0a081a] border border-[#261d56] rounded-3xl shadow-2xl flex flex-col overflow-hidden">
         
         {/* Modal Header */}
-        <div className="p-5 sm:p-6 border-b border-slate-800 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-slate-900/60">
+        <div className="p-5 sm:p-6 border-b border-[#261d56] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-[#120e2e]">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 flex items-center justify-center">
+            <div className="w-10 h-10 rounded-xl bg-purple-600/20 border border-purple-500/30 text-purple-400 flex items-center justify-center">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
@@ -108,7 +108,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                 <h2 className="font-heading text-lg sm:text-xl font-bold text-white">
                   Client Inquiries Manager
                 </h2>
-                <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20">
+                <span className="px-2 py-0.5 rounded-md text-[10px] font-semibold bg-purple-500/20 text-purple-300 border border-purple-500/30">
                   {inquiries.length} Total
                 </span>
               </div>
@@ -122,7 +122,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
             <button
               onClick={handleRefreshClick}
               disabled={isRefreshing}
-              className="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
+              className="p-2 rounded-xl bg-[#0a081a] border border-[#261d56] text-slate-300 hover:text-white hover:bg-[#1a143b] transition-colors"
               title="Refresh list"
             >
               <RefreshCw className={`w-4 h-4 ${isRefreshing ? 'animate-spin' : ''}`} />
@@ -131,16 +131,16 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
             <a
               href="/api/inquiries-export.csv"
               download
-              className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-slate-200 transition-colors border border-slate-700"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold bg-[#0a081a] hover:bg-[#1a143b] text-slate-200 transition-colors border border-[#261d56]"
               title="Download inquiries as CSV"
             >
-              <Download className="w-3.5 h-3.5 text-cyan-400" />
+              <Download className="w-3.5 h-3.5 text-purple-400" />
               <span>Export CSV</span>
             </a>
 
             <button
               onClick={onClose}
-              className="p-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 transition-colors"
+              className="p-2 rounded-xl bg-[#0a081a] border border-[#261d56] text-slate-300 hover:text-white hover:bg-[#1a143b] transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
@@ -148,15 +148,15 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
         </div>
 
         {/* Search & Filter Toolbar */}
-        <div className="p-4 border-b border-slate-800/80 bg-slate-950/70 flex flex-col md:flex-row gap-3 items-center justify-between">
+        <div className="p-4 border-b border-[#261d56] bg-[#0a081a] flex flex-col md:flex-row gap-3 items-center justify-between">
           <div className="relative w-full md:w-80">
-            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-slate-500" />
+            <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-purple-400/60" />
             <input
               type="text"
               placeholder="Search by client, email, ref #..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-9 pr-4 py-2 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+              className="w-full pl-9 pr-4 py-2 rounded-xl bg-[#130f2e] border border-[#261d56] text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
             />
           </div>
 
@@ -167,8 +167,8 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                 onClick={() => setStatusFilter(status)}
                 className={`px-3 py-1.5 rounded-xl text-xs font-medium capitalize whitespace-nowrap transition-colors cursor-pointer ${
                   statusFilter === status
-                    ? 'bg-cyan-500 text-slate-950 font-bold'
-                    : 'bg-slate-900 text-slate-400 hover:text-white hover:bg-slate-800'
+                    ? 'bg-purple-600 text-white font-bold shadow-md shadow-purple-600/30'
+                    : 'bg-[#130f2e] text-slate-400 hover:text-white hover:bg-[#1a143b] border border-[#261d56]'
                 }`}
               >
                 {status.replace('_', ' ')}
@@ -181,7 +181,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
         <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
           
           {/* Inquiry List (Left Pane) */}
-          <div className="w-full md:w-5/12 lg:w-4/12 border-b md:border-b-0 md:border-r border-slate-800 overflow-y-auto p-3 space-y-2.5">
+          <div className="w-full md:w-5/12 lg:w-4/12 border-b md:border-b-0 md:border-r border-[#261d56] overflow-y-auto p-3 space-y-2.5 bg-[#0a081a]">
             {filteredInquiries.length === 0 ? (
               <div className="text-center py-12 text-slate-500 text-xs">
                 No inquiries match your filter.
@@ -202,12 +202,12 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                     onClick={() => handleSelectInquiry(inq)}
                     className={`p-4 rounded-2xl border transition-all cursor-pointer ${
                       isSelected
-                        ? 'bg-slate-800/90 border-cyan-500 shadow-md'
-                        : 'bg-slate-900/60 border-slate-800/80 hover:border-slate-700 hover:bg-slate-900'
+                        ? 'bg-[#1a143b] border-purple-500 shadow-md shadow-purple-600/20'
+                        : 'bg-[#130f2e]/70 border-[#261d56] hover:border-purple-500/50 hover:bg-[#130f2e]'
                     }`}
                   >
                     <div className="flex items-center justify-between mb-1.5">
-                      <span className="font-mono text-[11px] font-bold text-cyan-400">
+                      <span className="font-mono text-[11px] font-bold text-purple-400">
                         {inq.id}
                       </span>
                       {getStatusBadge(inq.status)}
@@ -225,7 +225,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                     )}
 
                     <div className="mt-2.5 flex items-center justify-between text-[11px] text-slate-400">
-                      <span className="text-cyan-300 font-medium truncate max-w-[140px]">
+                      <span className="text-purple-300 font-medium truncate max-w-[140px]">
                         {inq.projectType}
                       </span>
                       <span>{formattedDate}</span>
@@ -237,15 +237,15 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
           </div>
 
           {/* Inquiry Detail View (Right Pane) */}
-          <div className="flex-1 overflow-y-auto p-6 bg-slate-950/40">
+          <div className="flex-1 overflow-y-auto p-6 bg-[#070612]">
             {selectedInquiry ? (
               <div className="space-y-6 max-w-2xl">
                 
                 {/* Header row */}
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-slate-800">
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#261d56]">
                   <div>
                     <div className="flex items-center gap-2 mb-1">
-                      <span className="font-mono text-sm font-bold text-cyan-400">
+                      <span className="font-mono text-sm font-bold text-purple-400">
                         {selectedInquiry.id}
                       </span>
                       {getStatusBadge(selectedInquiry.status)}
@@ -254,7 +254,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                       {selectedInquiry.fullName}
                     </h3>
                     {selectedInquiry.businessName && (
-                      <p className="text-xs text-cyan-300">
+                      <p className="text-xs text-purple-300">
                         {selectedInquiry.businessName}
                       </p>
                     )}
@@ -270,7 +270,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                         onUpdateStatus(selectedInquiry.id, newStat);
                         setSelectedInquiry({ ...selectedInquiry, status: newStat as any });
                       }}
-                      className="px-3 py-1.5 rounded-xl bg-slate-900 border border-slate-700 text-xs text-white focus:outline-none focus:border-cyan-400"
+                      className="px-3 py-1.5 rounded-xl bg-[#130f2e] border border-[#261d56] text-xs text-white focus:outline-none focus:border-purple-400"
                     >
                       <option value="new">New Inquiry</option>
                       <option value="contacted">Contacted</option>
@@ -289,9 +289,9 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                     )}&body=${encodeURIComponent(
                       `Hi ${selectedInquiry.fullName},\n\nThank you for reaching out via Mikky Digitalz regarding your ${selectedInquiry.projectType} project.\n\nI have reviewed your requirements and would love to share a clear milestone plan and timeline...\n\nBest regards,\nMitchell Adetayo (Mikky Digitalz)\nWhatsApp: +234 9024877275\n`
                     )}`}
-                    className="p-3 rounded-2xl bg-cyan-950/40 hover:bg-cyan-900/50 border border-cyan-800/40 text-cyan-300 text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
+                    className="p-3 rounded-2xl bg-purple-950/40 hover:bg-purple-900/50 border border-purple-700/40 text-purple-300 text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
                   >
-                    <Mail className="w-4 h-4 text-cyan-400" />
+                    <Mail className="w-4 h-4 text-purple-400" />
                     <span>Send Email Reply</span>
                   </a>
 
@@ -308,7 +308,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                       <span>WhatsApp Client</span>
                     </a>
                   ) : (
-                    <div className="p-3 rounded-2xl bg-slate-900/40 border border-slate-800 text-slate-500 text-xs flex items-center justify-center gap-2">
+                    <div className="p-3 rounded-2xl bg-[#130f2e] border border-[#261d56] text-slate-500 text-xs flex items-center justify-center gap-2">
                       <MessageSquare className="w-4 h-4" />
                       <span>No phone provided</span>
                     </div>
@@ -316,14 +316,14 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                 </div>
 
                 {/* Project Specs Grid */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-slate-900/50 border border-slate-800 text-xs">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 p-4 rounded-2xl bg-[#130f2e] border border-[#261d56] text-xs">
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase">Project Type</span>
                     <span className="font-semibold text-white">{selectedInquiry.projectType}</span>
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase">Budget</span>
-                    <span className="font-semibold text-emerald-400">{selectedInquiry.budgetRange}</span>
+                    <span className="font-semibold text-purple-400">{selectedInquiry.budgetRange}</span>
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase">Timeline</span>
@@ -331,16 +331,16 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                   </div>
                   <div>
                     <span className="text-slate-400 block text-[10px] uppercase">Contact Pref</span>
-                    <span className="font-semibold text-cyan-300 uppercase">{selectedInquiry.preferredContact}</span>
+                    <span className="font-semibold text-purple-300 uppercase">{selectedInquiry.preferredContact}</span>
                   </div>
                 </div>
 
                 {/* Message Content */}
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-purple-400 mb-2">
                     Client Project Brief
                   </h4>
-                  <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 text-xs sm:text-sm text-slate-200 leading-relaxed whitespace-pre-wrap">
+                  <div className="p-5 rounded-2xl bg-[#130f2e] border border-[#261d56] text-xs sm:text-sm text-slate-200 leading-relaxed whitespace-pre-wrap">
                     {selectedInquiry.message}
                   </div>
                 </div>
@@ -348,13 +348,13 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                 {/* Internal Notes Editor */}
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                    <h4 className="text-xs font-bold uppercase tracking-wider text-purple-400">
                       Private Notes (Mitchell only)
                     </h4>
                     <button
                       onClick={handleSaveNotes}
                       disabled={isSavingNotes}
-                      className="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-800 hover:bg-slate-700 text-cyan-300 transition-colors"
+                      className="px-3 py-1 rounded-lg text-xs font-semibold bg-purple-600 hover:bg-purple-500 text-white transition-colors"
                     >
                       {isSavingNotes ? 'Saving...' : 'Save Notes'}
                     </button>
@@ -364,13 +364,13 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                     placeholder="Add private project notes, call summaries, or custom estimates here..."
                     value={editingNotes}
                     onChange={(e) => setEditingNotes(e.target.value)}
-                    className="w-full px-4 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500"
+                    className="w-full px-4 py-2.5 rounded-xl bg-[#130f2e] border border-[#261d56] text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
                   />
                 </div>
 
                 {/* Security Audit Badge */}
                 {selectedInquiry.securityMeta && (
-                  <div className="p-3 rounded-xl bg-slate-950 border border-slate-800/80 text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
+                  <div className="p-3 rounded-xl bg-[#0a081a] border border-[#261d56] text-[11px] text-slate-400 flex flex-wrap items-center justify-between gap-2">
                     <span className="flex items-center gap-1.5 text-emerald-400">
                       <ShieldCheck className="w-3.5 h-3.5" />
                       Anti-Spam Verified Human ({selectedInquiry.securityMeta.submissionDurationSeconds}s interaction)
@@ -380,7 +380,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                 )}
 
                 {/* Delete button */}
-                <div className="pt-4 border-t border-slate-800/80 flex justify-end">
+                <div className="pt-4 border-t border-[#261d56] flex justify-end">
                   <button
                     onClick={async () => {
                       if (confirm(`Are you sure you want to delete inquiry ${selectedInquiry.id}?`)) {
@@ -388,7 +388,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                         setSelectedInquiry(null);
                       }
                     }}
-                    className="px-3.5 py-1.5 rounded-xl text-xs text-rose-400 hover:bg-rose-950/40 border border-rose-900/40 transition-colors flex items-center gap-1.5"
+                    className="px-3.5 py-1.5 rounded-xl text-xs text-rose-400 hover:bg-rose-950/40 border border-rose-900/40 transition-colors flex items-center gap-1.5 cursor-pointer"
                   >
                     <Trash2 className="w-3.5 h-3.5" />
                     <span>Delete Inquiry</span>

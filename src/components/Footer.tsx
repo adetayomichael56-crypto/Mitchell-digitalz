@@ -35,11 +35,14 @@ export const Footer: React.FC<FooterProps> = ({
   };
 
   return (
-    <footer className="bg-[#090a15] text-white pt-16 pb-12 border-t border-[#1e2442]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer className="bg-[#070612] text-white pt-16 pb-12 border-t border-[#261d56] relative overflow-hidden">
+      {/* Subtle purple footer glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[200px] bg-purple-600/5 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#1e2442]">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-[#261d56]">
           
           {/* Col 1: Brand Info (5 cols) */}
           <div className="md:col-span-5 flex flex-col items-start pr-0 md:pr-6">
@@ -55,12 +58,12 @@ export const Footer: React.FC<FooterProps> = ({
               />
             </button>
 
-            <p className="text-slate-400 text-sm leading-relaxed mb-6 max-w-sm">
+            <p className="text-slate-300 text-sm leading-relaxed mb-6 max-w-sm">
               Designing and building fast, high-converting websites on WordPress, Elementor, Squarespace, and Shopify for growing businesses, coaches, and brands worldwide.
             </p>
 
             <div className="flex flex-col gap-3 mb-4 w-full">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#181533] text-slate-300 text-xs font-medium border border-[#241d4a] w-fit">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#130f2e] text-slate-300 text-xs font-medium border border-[#261d56] w-fit">
                 <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                 <span>Available for new website projects</span>
               </div>
@@ -70,7 +73,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Col 2: Navigation (3 cols) */}
           <div className="md:col-span-3 flex flex-col gap-3">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-purple-400 mb-1">
               Navigation
             </h3>
             <a
@@ -81,7 +84,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigate('home');
                 }
               }}
-              className="text-left text-sm text-slate-300 hover:text-purple-400 transition-colors py-1 cursor-pointer text-inherit no-underline"
+              className="text-left text-sm text-slate-300 hover:text-purple-300 transition-colors py-1 cursor-pointer text-inherit no-underline"
             >
               Home
             </a>
@@ -93,7 +96,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigate('services');
                 }
               }}
-              className="text-left text-sm text-slate-300 hover:text-purple-400 transition-colors py-1 cursor-pointer text-inherit no-underline"
+              className="text-left text-sm text-slate-300 hover:text-purple-300 transition-colors py-1 cursor-pointer text-inherit no-underline"
             >
               Services Breakdown
             </a>
@@ -105,7 +108,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigate('work');
                 }
               }}
-              className="text-left text-sm text-slate-300 hover:text-purple-400 transition-colors py-1 cursor-pointer text-inherit no-underline"
+              className="text-left text-sm text-slate-300 hover:text-purple-300 transition-colors py-1 cursor-pointer text-inherit no-underline"
             >
               Portfolio & Mockups
             </a>
@@ -117,7 +120,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigate('pricing');
                 }
               }}
-              className="text-left text-sm text-slate-300 hover:text-purple-400 transition-colors py-1 cursor-pointer text-inherit no-underline"
+              className="text-left text-sm text-slate-300 hover:text-purple-300 transition-colors py-1 cursor-pointer text-inherit no-underline"
             >
               Pricing & Packages
             </a>
@@ -129,7 +132,7 @@ export const Footer: React.FC<FooterProps> = ({
                   onNavigate('blog');
                 }
               }}
-              className="text-left text-sm text-slate-300 hover:text-purple-400 transition-colors py-1 cursor-pointer flex items-center gap-1.5 text-inherit no-underline"
+              className="text-left text-sm text-slate-300 hover:text-purple-300 transition-colors py-1 cursor-pointer flex items-center gap-1.5 text-inherit no-underline"
             >
               <span>Blog & AEO Playbooks</span>
               <span className="text-[10px] bg-purple-500/20 text-purple-300 px-1.5 py-0.5 rounded-full font-bold">New</span>
@@ -137,17 +140,17 @@ export const Footer: React.FC<FooterProps> = ({
             {onOpenSeoAudit && (
               <button
                 onClick={onOpenSeoAudit}
-                className="text-left text-sm text-emerald-400 hover:text-emerald-300 transition-colors py-1 cursor-pointer flex items-center gap-1.5 font-medium"
+                className="text-left text-sm text-purple-300 hover:text-purple-200 transition-colors py-1 cursor-pointer flex items-center gap-1.5 font-medium"
               >
-                <span>Google Indexing & SEO Audit</span>
-                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 px-1.5 py-0.5 rounded-full font-bold">Checklist</span>
+                <span>Google Console & SEO Audit</span>
+                <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-1.5 py-0.5 rounded-full font-bold">GSC Ready</span>
               </button>
             )}
             <a
               href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-left text-sm text-slate-400 hover:text-slate-200 hover:underline transition-colors py-1 cursor-pointer flex items-center gap-1"
+              className="text-left text-sm text-slate-400 hover:text-purple-300 hover:underline transition-colors py-1 cursor-pointer flex items-center gap-1"
             >
               <span>Upwork Reviews (5.0★)</span>
               <ExternalLink className="w-3 h-3" />
@@ -156,7 +159,7 @@ export const Footer: React.FC<FooterProps> = ({
 
           {/* Col 3: Direct Contact (4 cols) */}
           <div className="md:col-span-4 flex flex-col gap-4">
-            <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-purple-400 mb-1">
               Direct Contact
             </h3>
             <p className="text-sm text-slate-300">
@@ -166,7 +169,7 @@ export const Footer: React.FC<FooterProps> = ({
             <div className="flex flex-col sm:flex-row gap-2 mt-1">
               <a
                 href={`mailto:${email}?subject=Website%20Project%20Inquiry%20-%20Mikky%20Digitalz`}
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#181533] hover:bg-[#241d4a] text-white text-sm font-medium transition-colors border border-[#241d4a]"
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#130f2e] hover:bg-[#1a143b] text-white text-sm font-medium transition-colors border border-[#261d56]"
               >
                 <Mail className="w-4 h-4 text-purple-400" />
                 <span className="truncate">{email}</span>
@@ -175,7 +178,7 @@ export const Footer: React.FC<FooterProps> = ({
 
               <button
                 onClick={handleCopyEmail}
-                className="inline-flex items-center justify-center p-2.5 rounded-lg bg-[#181533] hover:bg-[#241d4a] text-white text-sm transition-colors border border-[#241d4a] cursor-pointer"
+                className="inline-flex items-center justify-center p-2.5 rounded-lg bg-[#130f2e] hover:bg-[#1a143b] text-white text-sm transition-colors border border-[#261d56] cursor-pointer"
                 title="Copy email to clipboard"
               >
                 {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4 text-slate-300" />}
@@ -204,7 +207,7 @@ export const Footer: React.FC<FooterProps> = ({
         </div>
 
         {/* Profiles bar */}
-        <div className="py-8 border-b border-[#1e2442]">
+        <div className="py-8 border-b border-[#261d56]">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
             <div>
               <h4 className="text-xs font-bold uppercase tracking-widest text-purple-400">
@@ -222,9 +225,9 @@ export const Footer: React.FC<FooterProps> = ({
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>© {new Date().getFullYear()} Mikky Digitalz (Mitchell Adetayo). All rights reserved.</p>
           <div className="flex gap-6 text-slate-400">
-            <span className="hover:text-white transition-colors">WordPress & Elementor</span>
-            <span className="hover:text-white transition-colors">Squarespace</span>
-            <span className="hover:text-white transition-colors">Shopify</span>
+            <span className="hover:text-purple-300 transition-colors">WordPress & Elementor</span>
+            <span className="hover:text-purple-300 transition-colors">Squarespace</span>
+            <span className="hover:text-purple-300 transition-colors">Shopify</span>
           </div>
         </div>
 

@@ -71,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({
   };
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-[#101226]/95 backdrop-blur-md border-b border-[#1e2442] transition-colors">
+    <header className="sticky top-0 z-40 w-full bg-[#0a081a]/95 backdrop-blur-md border-b border-[#261d56] transition-colors">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-24 flex items-center justify-between">
         
         {/* Brand Logo */}
@@ -89,7 +89,7 @@ export const Header: React.FC<HeaderProps> = ({
           <img
             src="https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801863/My_real_logo_no_bg_uzbovb.png"
             alt="Mikky Digitalz Logo"
-            className="h-16 sm:h-20 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-[0_0_15px_rgba(139,92,246,0.3)]"
+            className="h-16 sm:h-20 w-auto object-contain transition-transform duration-200 group-hover:scale-105 drop-shadow-[0_0_20px_rgba(147,51,234,0.4)]"
             referrerPolicy="no-referrer"
           />
         </a>
@@ -110,12 +110,12 @@ export const Header: React.FC<HeaderProps> = ({
                   }
                 }}
                 className={`relative py-1 text-sm font-medium transition-colors cursor-pointer ${
-                  isActive ? 'text-purple-400 font-semibold' : 'text-slate-300 hover:text-white'
+                  isActive ? 'text-purple-300 font-semibold' : 'text-slate-300 hover:text-white'
                 }`}
               >
                 {link.label}
                 {isActive && (
-                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-purple-500 rounded-full shadow-[0_0_8px_#8b5cf6]" />
+                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-purple-500 rounded-full shadow-[0_0_10px_#9333ea]" />
                 )}
               </a>
             );
@@ -126,7 +126,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="hidden lg:flex items-center gap-4">
           
           {/* Live Clock Ticker */}
-          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#181533] border border-[#241d4a] text-xs font-mono text-slate-300 shadow-inner">
+          <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#130f2e] border border-[#261d56] text-xs font-mono text-slate-300 shadow-inner">
             <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
               <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
@@ -138,7 +138,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Inquiry Inbox Trigger (for owner / testing) */}
           <button
             onClick={onOpenInbox}
-            className="relative flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold bg-[#181533] hover:bg-[#241d4a] text-slate-200 border border-[#241d4a] hover:border-purple-500/50 transition-all cursor-pointer shadow-sm"
+            className="relative flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold bg-[#130f2e] hover:bg-[#1d1645] text-slate-200 border border-[#261d56] hover:border-purple-500/50 transition-all cursor-pointer shadow-sm"
             title="Manage client inquiries collected via form"
           >
             <Inbox className="w-3.5 h-3.5 text-purple-400" />
@@ -153,7 +153,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Book a Call CTA */}
           <button
             onClick={onOpenContact}
-            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold transition-all duration-150 cursor-pointer shadow-lg shadow-purple-600/30"
+            className="inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-sm font-semibold transition-all duration-150 cursor-pointer shadow-lg shadow-purple-600/35 hover:shadow-purple-500/50"
           >
             <span>Book a Call</span>
             <ArrowRight className="w-4 h-4" />
@@ -164,7 +164,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex lg:hidden items-center gap-2.5">
           <button
             onClick={onOpenInbox}
-            className="p-2 rounded-lg bg-[#181b38] border border-[#22274c] text-purple-400 relative"
+            className="p-2 rounded-lg bg-[#130f2e] border border-[#261d56] text-purple-400 relative"
             title="Inquiry Inbox"
           >
             <Inbox className="w-4 h-4" />
@@ -175,7 +175,7 @@ export const Header: React.FC<HeaderProps> = ({
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-white hover:bg-[#181b38] transition-colors"
+            className="p-2 rounded-lg text-white hover:bg-[#130f2e] transition-colors"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -192,10 +192,10 @@ export const Header: React.FC<HeaderProps> = ({
             onClick={() => setMobileMenuOpen(false)}
           />
 
-          <div className="fixed top-0 right-0 bottom-0 z-[101] w-full max-w-xs sm:max-w-sm bg-[#0c0e22] text-white border-l border-[#241d4a] shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+          <div className="fixed top-0 right-0 bottom-0 z-[101] w-full max-w-xs sm:max-w-sm bg-[#0a081a] text-white border-l border-[#261d56] shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
             <div>
               {/* Drawer Top */}
-              <div className="flex items-center justify-between pb-6 border-b border-[#241d4a]">
+              <div className="flex items-center justify-between pb-6 border-b border-[#261d56]">
                 <div className="flex items-center gap-3">
                   <img
                     src="https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801863/My_real_logo_no_bg_uzbovb.png"
@@ -210,14 +210,14 @@ export const Header: React.FC<HeaderProps> = ({
                 </div>
                 <button
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2.5 rounded-full bg-[#181533] border border-[#241d4a] text-slate-300 hover:text-white transition-all cursor-pointer"
+                  className="p-2.5 rounded-full bg-[#130f2e] border border-[#261d56] text-slate-300 hover:text-white transition-all cursor-pointer"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
               {/* Local Time Banner */}
-              <div className="mt-5 flex items-center justify-between px-4 py-3 rounded-2xl bg-[#151230] border border-[#241d4a] text-xs font-mono">
+              <div className="mt-5 flex items-center justify-between px-4 py-3 rounded-2xl bg-[#130f2e] border border-[#261d56] text-xs font-mono">
                 <div className="flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
                   <span className="text-slate-400 font-sans font-medium">Your Local Time:</span>

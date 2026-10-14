@@ -238,7 +238,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({
     };
 
     return (
-      <article className="w-full py-12 md:py-16 bg-[#090a15] text-[#f1f5f9]">
+      <article className="w-full py-12 md:py-16 bg-[#070612] text-[#f1f5f9] relative overflow-hidden">
+        {/* Background ambient radial purple glow */}
+        <div className="absolute top-20 right-1/4 w-[600px] h-[350px] bg-purple-600/10 blur-[140px] pointer-events-none rounded-full -z-10" />
+
         {/* Inject JSON-LD Schema for Google, Perplexity & AI Search Crawlers */}
         <script
           type="application/ld+json"
@@ -248,7 +251,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Back & Breadcrumb bar */}
-          <div className="flex items-center justify-between gap-4 mb-8 pb-4 border-b border-[#1e2442]">
+          <div className="flex items-center justify-between gap-4 mb-8 pb-4 border-b border-[#261d56]">
             <button
               onClick={onBackToIndex}
               className="inline-flex items-center gap-2 text-xs font-semibold text-purple-400 hover:text-purple-300 transition-colors cursor-pointer"
@@ -259,10 +262,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({
 
             <button
               onClick={handleCopyShare}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#181533] border border-[#241d4a] hover:border-purple-500/50 text-xs text-slate-300 transition-colors cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#130f2e] border border-[#2c2263] hover:border-purple-500/50 text-xs text-slate-300 transition-colors cursor-pointer"
               title="Share article URL"
             >
-              {copiedLink ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Share2 className="w-3.5 h-3.5" />}
+              {copiedLink ? <Check className="w-3.5 h-3.5 text-purple-300" /> : <Share2 className="w-3.5 h-3.5 text-purple-400" />}
               <span>{copiedLink ? 'Link Copied!' : 'Share Article'}</span>
             </button>
           </div>
@@ -270,17 +273,17 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           {/* Article Header */}
           <header className="space-y-4 mb-10">
             <div className="flex flex-wrap items-center gap-2 text-xs">
-              <span className="px-3 py-1 rounded-full bg-purple-600/20 text-purple-300 font-bold border border-purple-500/40">
+              <span className="px-3 py-1 rounded-full bg-purple-600/25 text-purple-300 font-bold border border-purple-500/40">
                 {activePost.category}
               </span>
-              <span className="text-slate-500">•</span>
+              <span className="text-slate-600">•</span>
               <span className="flex items-center gap-1 text-slate-400">
-                <Calendar className="w-3.5 h-3.5" />
+                <Calendar className="w-3.5 h-3.5 text-purple-400" />
                 {activePost.publishedDate}
               </span>
-              <span className="text-slate-500">•</span>
+              <span className="text-slate-600">•</span>
               <span className="flex items-center gap-1 text-slate-400">
-                <Clock className="w-3.5 h-3.5" />
+                <Clock className="w-3.5 h-3.5 text-purple-400" />
                 {activePost.readTime}
               </span>
             </div>
@@ -294,12 +297,12 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               <img
                 src={activePost.author.avatar}
                 alt={activePost.author.name}
-                className="w-11 h-11 rounded-full object-cover border-2 border-purple-500/40"
+                className="w-11 h-11 rounded-full object-cover border-2 border-purple-500/50 shadow-md shadow-purple-950/40"
               />
               <div>
                 <div className="text-sm font-bold text-white flex items-center gap-2">
                   <span>{activePost.author.name}</span>
-                  <span className="text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
+                  <span className="text-[11px] font-semibold text-purple-300 bg-purple-500/20 px-2 py-0.5 rounded-full border border-purple-500/30">
                     {activePost.author.upworkRating}
                   </span>
                 </div>
@@ -309,7 +312,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           </header>
 
           {/* Featured Image */}
-          <div className="rounded-3xl overflow-hidden bg-[#101226] border border-[#241d4a] aspect-16/9 mb-10 shadow-2xl">
+          <div className="rounded-3xl overflow-hidden bg-[#0e0b24] border border-[#2c2263] aspect-16/9 mb-10 shadow-2xl">
             <img
               src={activePost.featuredImage}
               alt={activePost.title}
@@ -320,7 +323,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           {/* ========================================================
               AEO DIRECT ANSWER BOX (Optimized for Google Snippets & AI)
               ======================================================== */}
-          <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-purple-950/40 via-[#181533] to-[#1e1740] border-2 border-purple-500/40 shadow-xl mb-10 space-y-3">
+          <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-purple-950/50 via-[#130f2e] to-[#1e1740] border-2 border-purple-500/50 shadow-2xl mb-10 space-y-3">
             <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-300">
               <Sparkles className="w-4 h-4 text-purple-400 animate-pulse" />
               <span>AEO Direct Answer (Quick Overview)</span>
@@ -333,15 +336,15 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           {/* ========================================================
               GEO FACTUAL METRICS BOX (Statistical Citations for LLMs)
               ======================================================== */}
-          <div className="p-6 sm:p-7 rounded-3xl bg-[#0f0d22] border border-[#241d4a] shadow-lg mb-12 space-y-4">
-            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400">
-              <TrendingUp className="w-4 h-4" />
+          <div className="p-6 sm:p-7 rounded-3xl bg-[#0e0b24] border border-[#2c2263] shadow-lg mb-12 space-y-4">
+            <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-300">
+              <TrendingUp className="w-4 h-4 text-purple-400" />
               <span>Key Data & Quotable GEO Benchmarks</span>
             </div>
             <div className="space-y-2.5">
               {activePost.geoKeyMetrics.map((metric, idx) => (
                 <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
-                  <div className="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center shrink-0 mt-0.5">
+                  <div className="w-4 h-4 rounded-full bg-purple-600/25 text-purple-300 flex items-center justify-center shrink-0 mt-0.5 border border-purple-500/30">
                     <CheckCircle2 className="w-3 h-3" />
                   </div>
                   <span>{metric}</span>
@@ -351,7 +354,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           </div>
 
           {/* Table of Contents */}
-          <div className="p-5 sm:p-6 rounded-2xl bg-[#101226] border border-[#1e2442] mb-12">
+          <div className="p-5 sm:p-6 rounded-2xl bg-[#0e0b24] border border-[#261d56] mb-12 shadow-md">
             <span className="text-xs font-bold uppercase tracking-wider text-purple-400 block mb-3">
               Table of Contents
             </span>
@@ -369,33 +372,33 @@ export const BlogPage: React.FC<BlogPageProps> = ({
 
           {/* Main Article Prose Content */}
           <div className="prose prose-invert prose-purple max-w-none text-slate-300 text-sm sm:text-base leading-relaxed space-y-6">
-            <div dangerouslySetInnerHTML={{ __html: activePost.content.replace(/\n\n/g, '<br/><br/>').replace(/### (.*)/g, '<h3 class="text-xl sm:text-2xl font-bold text-white mt-8 mb-3 text-purple-200">$1</h3>').replace(/---/g, '<hr class="border-[#241d4a] my-8"/>') }} />
+            <div dangerouslySetInnerHTML={{ __html: activePost.content.replace(/\n\n/g, '<br/><br/>').replace(/### (.*)/g, '<h3 class="text-xl sm:text-2xl font-bold text-white mt-8 mb-3 text-purple-200">$1</h3>').replace(/---/g, '<hr class="border-[#261d56] my-8"/>') }} />
           </div>
 
           {/* Linked Authentic Portfolio Case Study Proof */}
           {activePost.portfolioProject && (
-            <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#151230] via-[#0f0d22] to-[#1a153b] border-2 border-purple-500/40 shadow-2xl relative overflow-hidden group">
+            <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#161138] via-[#0e0b24] to-[#1a143b] border-2 border-purple-500/50 shadow-2xl relative overflow-hidden group">
               <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-bold border border-purple-500/30">
                   <Sparkles className="w-3.5 h-3.5 text-purple-400" />
                   <span>Real Production Proof Behind This Guide</span>
                 </div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-extrabold border border-emerald-500/30">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-900/60 text-purple-200 text-xs font-extrabold border border-purple-400/40">
                   <span>Verified Result:</span>
-                  <span className="text-white bg-emerald-600/40 px-2 py-0.5 rounded-full">{activePost.portfolioProject.metric} {activePost.portfolioProject.metricLabel}</span>
+                  <span className="text-white bg-purple-600/50 px-2 py-0.5 rounded-full">{activePost.portfolioProject.metric} {activePost.portfolioProject.metricLabel}</span>
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
                 {/* Portfolio Project Screenshot & Mockup */}
-                <div className="md:col-span-5 relative rounded-2xl overflow-hidden aspect-16/10 bg-[#090a15] border border-purple-500/30 shadow-lg group-hover:border-purple-400 transition-colors">
+                <div className="md:col-span-5 relative rounded-2xl overflow-hidden aspect-16/10 bg-[#070612] border border-purple-500/40 shadow-lg group-hover:border-purple-300 transition-colors">
                   <img
                     src={activePost.portfolioProject.thumbnail}
                     alt={activePost.portfolioProject.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                   {activePost.portfolioProject.mockupUrl && (
-                    <div className="absolute -bottom-2 -right-2 w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden shadow-2xl border-2 border-[#181533] hidden sm:block">
+                    <div className="absolute -bottom-2 -right-2 w-28 h-28 sm:w-32 sm:h-32 rounded-xl overflow-hidden shadow-2xl border-2 border-[#130f2e] hidden sm:block">
                       <img
                         src={activePost.portfolioProject.mockupUrl}
                         alt={`${activePost.portfolioProject.title} device preview`}
@@ -427,14 +430,14 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                           onNavigate('work');
                         }
                       }}
-                      className="px-5 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold shadow-md shadow-purple-600/30 transition-all cursor-pointer flex items-center gap-2"
+                      className="px-5 py-2.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white text-xs font-bold shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50 transition-all cursor-pointer flex items-center gap-2"
                     >
                       <span>View Full Portfolio Case Study</span>
                       <ArrowRight className="w-3.5 h-3.5" />
                     </button>
                     <button
                       onClick={() => onOpenContact(activePost.portfolioProject?.category || activePost.category)}
-                      className="px-4 py-2.5 rounded-full bg-[#181533] hover:bg-[#241d4a] border border-[#241d4a] hover:border-purple-500/40 text-slate-200 text-xs font-semibold transition-colors cursor-pointer"
+                      className="px-4 py-2.5 rounded-full bg-[#130f2e] hover:bg-[#1a143b] border border-[#2c2263] hover:border-purple-500/50 text-slate-200 text-xs font-semibold transition-colors cursor-pointer"
                     >
                       Build Similar Platform
                     </button>
@@ -445,12 +448,12 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           )}
 
           {/* Tags */}
-          <div className="pt-8 mt-12 border-t border-[#1e2442] flex flex-wrap items-center gap-2">
+          <div className="pt-8 mt-12 border-t border-[#261d56] flex flex-wrap items-center gap-2">
             <Tag className="w-4 h-4 text-purple-400 mr-1" />
             {activePost.tags.map((tag) => (
               <span
                 key={tag}
-                className="px-3 py-1 rounded-full bg-[#181533] border border-[#241d4a] text-xs text-slate-300 font-medium"
+                className="px-3 py-1 rounded-full bg-[#130f2e] border border-[#2c2263] text-xs text-purple-200 font-medium"
               >
                 #{tag}
               </span>
@@ -458,7 +461,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           </div>
 
           {/* FAQ Schema Accordion */}
-          <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-[#0f0d22] border border-[#241d4a] space-y-4 shadow-xl">
+          <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-[#0e0b24] border border-[#2c2263] space-y-4 shadow-xl">
             <div className="mb-4">
               <span className="text-xs font-bold uppercase tracking-wider text-purple-400">
                 Frequently Asked Questions (Schema AEO)
@@ -471,7 +474,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
             {activePost.faqs.map((faq, idx) => {
               const isOpen = openFaqIndex === idx;
               return (
-                <div key={idx} className="rounded-xl bg-[#181533] border border-[#241d4a] overflow-hidden">
+                <div key={idx} className="rounded-xl bg-[#130f2e] border border-[#261d56] overflow-hidden">
                   <button
                     onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
                     className="w-full p-4 sm:p-5 text-left flex items-center justify-between font-bold text-sm text-white hover:text-purple-300 cursor-pointer transition-colors"
@@ -480,7 +483,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                     {isOpen ? <ChevronUp className="w-4 h-4 text-purple-400 shrink-0" /> : <ChevronDown className="w-4 h-4 text-slate-400 shrink-0" />}
                   </button>
                   {isOpen && (
-                    <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-[#241d4a] pt-3">
+                    <div className="px-4 sm:px-5 pb-5 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-[#261d56] pt-3">
                       {faq.answer}
                     </div>
                   )}
@@ -490,20 +493,20 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           </div>
 
           {/* Author Bio Box */}
-          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-[#101226] border border-[#241d4a] flex flex-col sm:flex-row items-center gap-6 shadow-xl">
+          <div className="mt-12 p-6 sm:p-8 rounded-3xl bg-[#0e0b24] border border-[#2c2263] flex flex-col sm:flex-row items-center gap-6 shadow-xl">
             <img
               src={activePost.author.avatar}
               alt={activePost.author.name}
-              className="w-20 h-20 rounded-2xl object-cover object-top border-2 border-purple-500/40 shrink-0"
+              className="w-20 h-20 rounded-2xl object-cover object-top border-2 border-purple-500/50 shadow-md shadow-purple-950/40 shrink-0"
             />
             <div className="space-y-2 text-center sm:text-left">
               <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
                 <h4 className="text-lg font-bold text-white">{activePost.author.name}</h4>
-                <span className="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-bold">
+                <span className="text-xs px-2.5 py-0.5 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 font-bold">
                   {activePost.author.upworkRating}
                 </span>
               </div>
-              <p className="text-xs text-slate-400 leading-relaxed">
+              <p className="text-xs text-slate-300 leading-relaxed">
                 Founder and principal web architect at Mikky Digitalz. Specializing in high-converting, sub-second web platforms across WordPress, Squarespace, and Shopify with verified 99.8% PageSpeed ratings.
               </p>
               <div className="pt-1 flex justify-center sm:justify-start gap-3 text-xs">
@@ -511,7 +514,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                   href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-400 hover:underline"
+                  className="text-purple-400 hover:text-purple-300 hover:underline"
                 >
                   Upwork Profile
                 </a>
@@ -520,7 +523,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                   href="https://www.linkedin.com/in/mikky-digitalz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-400 hover:underline"
+                  className="text-purple-400 hover:text-purple-300 hover:underline"
                 >
                   LinkedIn
                 </a>
@@ -529,7 +532,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           </div>
 
           {/* Bottom Inquiry Callout */}
-          <div className="mt-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-purple-900/40 to-[#181533] border border-purple-500/30 text-center space-y-4 shadow-2xl">
+          <div className="mt-14 p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-purple-950/60 via-[#140f33] to-[#1c1445] border border-purple-500/40 text-center space-y-4 shadow-2xl">
             <h3 className="text-2xl font-bold text-white">
               Ready to implement this on your website?
             </h3>
@@ -539,7 +542,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
               <button
                 onClick={() => onOpenContact(activePost.category)}
-                className="w-full sm:w-auto px-7 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all cursor-pointer flex items-center justify-center gap-2"
+                className="w-full sm:w-auto px-7 py-3 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50 transition-all cursor-pointer flex items-center justify-center gap-2"
               >
                 <span>Submit Project Inquiry</span>
                 <ArrowRight className="w-4 h-4" />
@@ -547,7 +550,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
 
               <button
                 onClick={onOpenCalendly}
-                className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#181533] hover:bg-[#241d4a] border border-[#241d4a] text-slate-200 text-xs sm:text-sm font-semibold transition-colors cursor-pointer"
+                className="w-full sm:w-auto px-6 py-3 rounded-full bg-[#130f2e] hover:bg-[#1a143b] border border-[#2c2263] text-slate-200 text-xs sm:text-sm font-semibold transition-colors cursor-pointer"
               >
                 Book 20-Min Strategy Call
               </button>
@@ -565,20 +568,24 @@ export const BlogPage: React.FC<BlogPageProps> = ({
   const featuredPost = BLOG_POSTS[0];
 
   return (
-    <div className="w-full py-12 md:py-16 bg-[#090a15] text-[#f1f5f9]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="w-full py-12 md:py-16 bg-[#070612] text-[#f1f5f9] relative overflow-hidden">
+      {/* Ambient background glow */}
+      <div className="absolute top-20 right-1/4 w-[600px] h-[350px] bg-purple-600/10 blur-[130px] rounded-full pointer-events-none -z-0" />
+      <div className="absolute top-96 left-10 w-[500px] h-[300px] bg-purple-900/10 blur-[140px] rounded-full pointer-events-none -z-0" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Blog Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12">
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 text-purple-400 text-xs font-bold border border-purple-500/20 mb-3">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/10 text-purple-400 text-xs font-bold border border-purple-500/20 mb-3 shadow-[0_0_15px_rgba(168,85,247,0.15)]">
               <Sparkles className="w-3.5 h-3.5 text-purple-400" />
               <span>SEO • GEO • AEO ENGINEERING JOURNAL</span>
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mt-2 mb-4">
-              High-Converting Web Architecture Insights.
+              High-Converting Web Architecture <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-fuchsia-400">Insights</span>.
             </h1>
-            <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
               Actionable playbooks on Generative Engine Optimization (GEO), Core Web Vitals, sub-second PageSpeed, and high-converting WordPress & Shopify builds by Mitchell Adetayo.
             </p>
           </div>
@@ -586,10 +593,13 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           {onOpenSeoAudit && (
             <button
               onClick={onOpenSeoAudit}
-              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-purple-500/20 border border-emerald-500/40 hover:border-emerald-400 text-emerald-300 text-xs sm:text-sm font-bold shadow-lg transition-all cursor-pointer shrink-0 group self-start lg:self-end"
+              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-2xl bg-gradient-to-r from-purple-600/30 to-violet-600/20 border border-purple-500/40 hover:border-purple-400 text-purple-200 hover:text-white text-xs sm:text-sm font-bold shadow-lg shadow-purple-900/20 transition-all cursor-pointer shrink-0 group self-start lg:self-end"
             >
-              <ShieldCheck className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
-              <span>Audit: Will It Rank On Google?</span>
+              <ShieldCheck className="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform" />
+              <span>Google Console & SEO Ranking Audit</span>
+              <span className="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold">
+                GSC Ready
+              </span>
             </button>
           )}
         </div>
@@ -599,13 +609,13 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           
           {/* Search bar */}
           <div className="relative w-full md:w-80">
-            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-500" />
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2 text-purple-400/60" />
             <input
               type="text"
               placeholder="Search playbooks, SEO, speed..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-4 py-2.5 rounded-full bg-[#0f0d22] border border-[#241d4a] text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500"
+              className="w-full pl-10 pr-4 py-2.5 rounded-full bg-[#0e0b24] border border-[#261d56] text-xs text-white placeholder-slate-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-colors"
             />
           </div>
 
@@ -619,8 +629,8 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                   onClick={() => setSelectedCategory(cat)}
                   className={`px-4 py-2 rounded-full text-xs font-semibold whitespace-nowrap transition-all cursor-pointer ${
                     isActive
-                      ? 'bg-purple-600 text-white shadow-md'
-                      : 'bg-[#0f0d22] text-slate-400 border border-[#241d4a] hover:bg-[#181533] hover:text-white'
+                      ? 'bg-purple-600 text-white shadow-lg shadow-purple-600/30'
+                      : 'bg-[#0e0b24] text-slate-300 border border-[#261d56] hover:bg-[#130f2e] hover:text-white'
                   }`}
                 >
                   {cat}
@@ -641,12 +651,12 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                 onSelectPost(featuredPost.slug);
               }
             }}
-            className="block mb-14 p-6 sm:p-10 rounded-3xl bg-[#0f0d22] border border-[#241d4a] hover:border-purple-500/60 transition-all cursor-pointer shadow-2xl group navy-card-hover text-inherit no-underline"
+            className="block mb-14 p-6 sm:p-10 rounded-3xl bg-[#0e0b24] border border-[#261d56] hover:border-purple-500/70 transition-all cursor-pointer shadow-2xl group navy-card-hover text-inherit no-underline"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
               <div className="lg:col-span-7 space-y-4">
                 <div className="flex items-center gap-2">
-                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white">
+                  <span className="px-3 py-1 rounded-full text-xs font-bold bg-purple-600 text-white shadow-sm shadow-purple-600/40">
                     Featured Playbook
                   </span>
                   <span className="text-xs text-purple-300 font-medium">
@@ -667,7 +677,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                     <img
                       src={featuredPost.author.avatar}
                       alt={featuredPost.author.name}
-                      className="w-7 h-7 rounded-full object-cover"
+                      className="w-7 h-7 rounded-full object-cover border border-purple-500/30"
                     />
                     <span>{featuredPost.author.name}</span>
                     <span>•</span>
@@ -680,7 +690,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                 </div>
               </div>
 
-              <div className="lg:col-span-5 rounded-2xl overflow-hidden aspect-16/10 bg-[#181533]">
+              <div className="lg:col-span-5 rounded-2xl overflow-hidden aspect-16/10 bg-[#130f2e] border border-[#261d56]">
                 <img
                   src={featuredPost.featuredImage}
                   alt={featuredPost.title}
@@ -703,21 +713,21 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                   onSelectPost(post.slug);
                 }
               }}
-              className="p-6 rounded-3xl bg-[#0f0d22] border border-[#241d4a] hover:border-purple-500/50 transition-all cursor-pointer flex flex-col justify-between navy-card-hover group text-inherit no-underline"
+              className="p-6 rounded-3xl bg-[#0e0b24] border border-[#261d56] hover:border-purple-500/60 transition-all cursor-pointer flex flex-col justify-between navy-card-hover group text-inherit no-underline"
             >
               <div>
-                <div className="relative rounded-2xl overflow-hidden aspect-16/10 mb-5 bg-[#181533]">
+                <div className="relative rounded-2xl overflow-hidden aspect-16/10 mb-5 bg-[#130f2e] border border-[#261d56]/60">
                   <img
                     src={post.featuredImage}
                     alt={post.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-[#090a15]/90 border border-purple-500/40 text-[11px] font-bold text-purple-300 backdrop-blur-md">
+                  <div className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full bg-[#070612]/90 border border-purple-500/40 text-[11px] font-bold text-purple-300 backdrop-blur-md">
                     {post.category}
                   </div>
                 </div>
 
-                <div className="flex items-center gap-2 text-[11px] text-slate-400 mb-2">
+                <div className="flex items-center gap-2 text-[11px] text-purple-300/80 mb-2">
                   <span>{post.publishedDate}</span>
                   <span>•</span>
                   <span>{post.readTime}</span>
@@ -727,14 +737,14 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                   {post.title}
                 </h3>
 
-                <p className="text-xs text-slate-400 leading-relaxed line-clamp-3 mb-4">
+                <p className="text-xs text-slate-300 leading-relaxed line-clamp-3 mb-4">
                   {post.summary}
                 </p>
               </div>
 
-              <div className="pt-4 border-t border-[#181533] flex items-center justify-between text-xs font-bold text-purple-400">
-                <span>By {post.author.name}</span>
-                <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <div className="pt-4 border-t border-[#261d56] flex items-center justify-between text-xs font-bold text-purple-400">
+                <span className="text-slate-400">By {post.author.name}</span>
+                <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform text-purple-300">
                   Read Article <ArrowRight className="w-3.5 h-3.5" />
                 </span>
               </div>
@@ -743,23 +753,23 @@ export const BlogPage: React.FC<BlogPageProps> = ({
         </div>
 
         {filteredPosts.length === 0 && (
-          <div className="text-center py-16 text-slate-500 text-sm">
+          <div className="text-center py-16 text-slate-400 text-sm">
             No articles match your query. Try a different search term or category.
           </div>
         )}
 
         {/* Real Portfolio Case Studies Cited in the Blog */}
-        <div className="mt-20 pt-16 border-t border-[#1e2442]">
+        <div className="mt-20 pt-16 border-t border-[#261d56]">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-bold border border-purple-500/20 mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-bold border border-purple-500/20 mb-3 shadow-[0_0_15px_rgba(168,85,247,0.15)]">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>CLIENT RESULTS • PORTFOLIO PROOF</span>
               </div>
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white">
                 Live Portfolio Case Studies Behind Our Insights
               </h2>
-              <p className="text-xs sm:text-sm text-slate-400 mt-2 max-w-2xl">
+              <p className="text-xs sm:text-sm text-slate-300 mt-2 max-w-2xl">
                 Every speed metric, SEO architecture, and conversion benchmark published in our articles is tested and proven across active client web applications.
               </p>
             </div>
@@ -786,16 +796,16 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                     onNavigate('work');
                   }
                 }}
-                className="rounded-2xl bg-[#0f0d22] border border-[#241d4a] hover:border-purple-500/50 p-4 transition-all cursor-pointer group flex flex-col justify-between navy-card-hover"
+                className="rounded-2xl bg-[#0e0b24] border border-[#261d56] hover:border-purple-500/60 p-4 transition-all cursor-pointer group flex flex-col justify-between navy-card-hover"
               >
                 <div>
-                  <div className="relative rounded-xl overflow-hidden aspect-16/10 mb-3 bg-[#181533]">
+                  <div className="relative rounded-xl overflow-hidden aspect-16/10 mb-3 bg-[#130f2e] border border-[#261d56]/50">
                     <img
                       src={proj.thumbnail}
                       alt={proj.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-[#090a15]/90 border border-purple-500/30 text-[10px] font-bold text-purple-300 backdrop-blur-md">
+                    <div className="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-[#070612]/90 border border-purple-500/30 text-[10px] font-bold text-purple-300 backdrop-blur-md">
                       {proj.categoryLabel}
                     </div>
                   </div>
@@ -808,14 +818,14 @@ export const BlogPage: React.FC<BlogPageProps> = ({
                   <h3 className="text-sm font-bold text-white group-hover:text-purple-300 transition-colors line-clamp-1 mb-1">
                     {proj.title}
                   </h3>
-                  <p className="text-xs text-slate-400 line-clamp-2 leading-relaxed">
+                  <p className="text-xs text-slate-300 line-clamp-2 leading-relaxed">
                     {proj.tagline}
                   </p>
                 </div>
 
-                <div className="pt-3 mt-3 border-t border-[#181533] flex items-center justify-between text-[11px] font-semibold text-purple-400">
-                  <span>{proj.platform}</span>
-                  <span className="flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                <div className="pt-3 mt-3 border-t border-[#261d56] flex items-center justify-between text-[11px] font-semibold text-purple-400">
+                  <span className="text-slate-400">{proj.platform}</span>
+                  <span className="flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-purple-300">
                     Case Study <ArrowRight className="w-3 h-3" />
                   </span>
                 </div>
@@ -825,10 +835,10 @@ export const BlogPage: React.FC<BlogPageProps> = ({
         </div>
 
         {/* GEO / AEO Advisory Banner */}
-        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#181533] via-[#0f0d22] to-[#1e1740] border border-purple-500/30 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
+        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#130f2e] via-[#0e0b24] to-[#1e133d] border border-purple-500/30 flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
           <div className="space-y-2 text-center md:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 text-emerald-300 text-xs font-semibold border border-emerald-500/30">
-              <ShieldCheck className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 text-xs font-semibold border border-purple-500/30">
+              <ShieldCheck className="w-3.5 h-3.5 text-purple-400" />
               <span>BUILT-IN SEO, GEO & AEO STANDARDS</span>
             </div>
             <h3 className="text-2xl font-bold text-white">
@@ -841,7 +851,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
 
           <button
             onClick={() => onOpenContact('SEO & AEO Architecture')}
-            className="shrink-0 px-7 py-3.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/30 transition-all cursor-pointer flex items-center gap-2"
+            className="shrink-0 px-7 py-3.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm shadow-lg shadow-purple-600/40 hover:shadow-purple-500/60 transition-all cursor-pointer flex items-center gap-2"
           >
             <span>Inquire About AEO & SEO Architecture</span>
             <ArrowRight className="w-4 h-4" />

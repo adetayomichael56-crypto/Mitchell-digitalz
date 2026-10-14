@@ -156,10 +156,10 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
       />
 
       {/* Drawer Container */}
-      <div className="relative z-10 w-full max-w-lg bg-[#0f0d22] text-white h-full shadow-2xl border-l border-[#241d4a] flex flex-col justify-between overflow-y-auto animate-slide-in-right">
+      <div className="relative z-10 w-full max-w-lg bg-[#0a081a] text-white h-full shadow-2xl border-l border-[#261d56] flex flex-col justify-between overflow-y-auto animate-slide-in-right">
         
         {/* Header */}
-        <div className="p-6 md:p-8 bg-[#181533] text-white flex items-center justify-between border-b border-[#241d4a] shrink-0">
+        <div className="p-6 md:p-8 bg-[#120e2e] text-white flex items-center justify-between border-b border-[#261d56] shrink-0">
           <div>
             <span className="text-xs uppercase tracking-widest text-purple-400 font-bold">
               Mikky Digitalz
@@ -170,7 +170,7 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-[#0f0d22] hover:bg-[#241d4a] text-slate-300 transition-colors cursor-pointer"
+            className="p-2 rounded-full bg-[#0a081a] hover:bg-[#1a143b] text-slate-300 transition-colors cursor-pointer border border-[#261d56]"
             aria-label="Close modal"
           >
             <X className="w-5 h-5" />
@@ -199,7 +199,7 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
                 Thank you <strong className="text-white">{submittedInquiry.fullName}</strong>. Your inquiry details for <strong className="text-purple-400">{submittedInquiry.projectType}</strong> have been securely recorded in Mitchell's queue.
               </p>
 
-              <div className="w-full bg-[#181533] p-4 rounded-xl text-left border border-[#241d4a] space-y-2 text-xs">
+              <div className="w-full bg-[#130f2e] p-4 rounded-xl text-left border border-[#261d56] space-y-2 text-xs">
                 <div>
                   <span className="text-slate-400">Service Requested:</span>{' '}
                   <span className="font-semibold text-white">{submittedInquiry.projectType}</span>
@@ -275,7 +275,7 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                   placeholder="e.g. Sarah Lin"
-                  className="w-full px-4 py-2.5 rounded-lg bg-[#181533] border border-[#241d4a] text-white text-sm focus:outline-none focus:border-purple-500 transition-all placeholder:text-slate-500"
+                  className="w-full px-4 py-2.5 rounded-lg bg-[#130f2e] border border-[#261d56] text-white text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-slate-500"
                 />
               </div>
 
@@ -290,7 +290,7 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   placeholder="e.g. sarah@example.com"
-                  className="w-full px-4 py-2.5 rounded-lg bg-[#181533] border border-[#241d4a] text-white text-sm focus:outline-none focus:border-purple-500 transition-all placeholder:text-slate-500"
+                  className="w-full px-4 py-2.5 rounded-lg bg-[#130f2e] border border-[#261d56] text-white text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-slate-500"
                 />
               </div>
 
@@ -302,7 +302,7 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
                 <select
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-lg bg-[#181533] border border-[#241d4a] text-white text-sm focus:outline-none focus:border-purple-500 transition-all cursor-pointer"
+                  className="w-full px-4 py-2.5 rounded-lg bg-[#130f2e] border border-[#261d56] text-white text-sm focus:outline-none focus:border-purple-500 transition-all cursor-pointer"
                 >
                   <option value="WordPress & Elementor">WordPress & Elementor</option>
                   <option value="Squarespace Custom Build">Squarespace Custom Build</option>
@@ -330,8 +330,8 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
                       onClick={() => setFormData({ ...formData, budget: b })}
                       className={`p-2 rounded-lg text-xs font-medium border text-center transition-all cursor-pointer ${
                         formData.budget === b
-                          ? 'bg-purple-600 text-white border-purple-500 font-bold shadow-xs'
-                          : 'bg-[#181533] text-slate-300 border-[#241d4a] hover:bg-[#241d4a]'
+                          ? 'bg-purple-600 text-white border-purple-500 font-bold shadow-md shadow-purple-600/30'
+                          : 'bg-[#130f2e] text-slate-300 border-[#261d56] hover:bg-[#1a143b] hover:border-purple-500/50'
                       }`}
                     >
                       {b}
@@ -351,12 +351,12 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Share a short summary of your project goals, deadlines, or websites you like..."
-                  className="w-full px-4 py-2.5 rounded-lg bg-[#181533] border border-[#241d4a] text-white text-sm focus:outline-none focus:border-purple-500 transition-all placeholder:text-slate-500"
+                  className="w-full px-4 py-2.5 rounded-lg bg-[#130f2e] border border-[#261d56] text-white text-sm focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all placeholder:text-slate-500"
                 />
               </div>
 
               {/* Anti-spam Human Verification */}
-              <div className="p-3.5 rounded-xl bg-[#181533] border border-[#241d4a] flex items-center justify-between gap-3 text-xs">
+              <div className="p-3.5 rounded-xl bg-[#130f2e] border border-[#261d56] flex items-center justify-between gap-3 text-xs">
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-purple-400 shrink-0" />
                   <span className="text-slate-300">
@@ -370,12 +370,12 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
                     placeholder="Ans"
                     value={securityAnswer}
                     onChange={(e) => setSecurityAnswer(e.target.value)}
-                    className="w-16 px-2 py-1 rounded bg-[#0f0d22] border border-[#241d4a] text-center text-xs text-white"
+                    className="w-16 px-2 py-1 rounded bg-[#0a081a] border border-[#261d56] text-center text-xs text-white focus:outline-none focus:border-purple-500"
                   />
                   <button
                     type="button"
                     onClick={refreshChallenge}
-                    className="p-1 rounded bg-[#0f0d22] text-slate-400 hover:text-white"
+                    className="p-1 rounded bg-[#0a081a] border border-[#261d56] text-slate-400 hover:text-white"
                     title="Refresh calculation"
                   >
                     <RefreshCw className="w-3 h-3" />

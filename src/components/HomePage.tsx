@@ -75,32 +75,37 @@ export const HomePage: React.FC<HomePageProps> = ({
   const featuredProjects = PROJECTS.filter((p) => p.featured).slice(0, 4);
 
   return (
-    <div className="w-full bg-[#090a15] text-[#f1f5f9]">
+    <div className="w-full bg-[#070612] text-[#f1f5f9] relative overflow-hidden">
       
       {/* HERO SECTION */}
       <section className="relative min-h-[85vh] flex items-center justify-center pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        {/* Background ambient radial purple glows */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[450px] bg-gradient-to-tr from-purple-600/20 via-violet-600/15 to-indigo-600/10 blur-[140px] pointer-events-none rounded-full -z-10" />
+        <div className="absolute top-10 right-10 w-80 h-80 bg-purple-500/15 blur-[110px] pointer-events-none rounded-full -z-10" />
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-violet-600/10 blur-[100px] pointer-events-none rounded-full -z-10" />
+
         <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
           {/* Left Column (7 cols) */}
           <div className="lg:col-span-7 text-left space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 text-purple-400 text-xs sm:text-sm font-semibold border border-purple-500/20 shadow-xs">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/15 text-purple-300 text-xs sm:text-sm font-semibold border border-purple-500/30 shadow-lg shadow-purple-900/20">
               <Sparkles className="w-4 h-4 text-purple-400" />
               <span>Mikky Digitalz — High-Converting Web Design</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white leading-[1.08]">
-              Websites Built to Convert, Not Just Impress.
+              Websites Built to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-purple-200">Convert</span>, Not Just Impress.
             </h1>
 
-            <p className="text-base sm:text-lg text-slate-400 leading-relaxed max-w-2xl">
-              Hi, I'm <strong className="text-white">Mitchell Adetayo</strong> (Mikky Digitalz). I design and build ultra-fast, responsive WordPress, Elementor, Squarespace, and Shopify websites engineered to turn visitors into paying clients.
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+              Hi, I'm <strong className="text-white">Mitchell Adetayo</strong> (Mikky Digitalz). I design and build ultra-fast, responsive <span className="text-purple-300 font-medium">WordPress & Elementor</span>, <span className="text-purple-300 font-medium">Squarespace</span>, and <span className="text-purple-300 font-medium">Shopify</span> websites engineered to turn visitors into paying clients.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
               <button
                 onClick={onOpenCalendly}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold text-base transition-all duration-150 flex items-center justify-center gap-2 shadow-lg shadow-purple-600/30 cursor-pointer hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold text-base transition-all duration-150 flex items-center justify-center gap-2 shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50 cursor-pointer hover:scale-105 active:scale-95"
               >
                 <span>Book Call on Calendly</span>
                 <ArrowRight className="w-5 h-5" />
@@ -108,7 +113,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
               <button
                 onClick={() => onNavigate('work')}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#0f0d22] text-slate-200 border border-[#241d4a] font-semibold text-base hover:bg-[#181533] hover:text-white transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#110d2c] text-slate-200 border border-[#2c2263] font-semibold text-base hover:bg-[#18123a] hover:text-white hover:border-purple-500/50 transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
                 <span>Explore Mockups & Work</span>
                 <ArrowRight className="w-5 h-5" />
@@ -116,13 +121,13 @@ export const HomePage: React.FC<HomePageProps> = ({
             </div>
 
             {/* Upwork status & Social pills */}
-            <div className="inline-flex flex-col gap-3 p-4 rounded-2xl bg-[#0f0d22] border border-[#241d4a] text-xs sm:text-sm text-slate-300 w-full shadow-md">
+            <div className="inline-flex flex-col gap-3 p-4 rounded-2xl bg-[#110d2c] border border-[#2c2263] text-xs sm:text-sm text-slate-300 w-full shadow-lg">
               <div className="flex items-center gap-3">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                <span className="font-semibold text-purple-400">Upwork Top Rated:</span>
-                <span className="text-slate-400">5.0★ Rating across 30 verified client projects.</span>
+                <span className="font-semibold text-purple-300">Upwork Top Rated:</span>
+                <span className="text-slate-300">5.0★ Rating across 30 verified client projects.</span>
               </div>
-              <div className="pt-2 border-t border-[#241d4a]">
+              <div className="pt-2 border-t border-[#261d56]">
                 <span className="block text-[11px] font-bold uppercase tracking-wider text-purple-400 mb-2">
                   Connect Across Platforms:
                 </span>
@@ -133,27 +138,27 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           {/* Right Column: Founder Photo & Rating Badge (5 cols) */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
-            <div className="relative w-full max-w-md aspect-4/5 rounded-3xl overflow-hidden border-2 border-purple-500/30 bg-[#101226] shadow-2xl group">
+            <div className="relative w-full max-w-md aspect-4/5 rounded-3xl overflow-hidden border-2 border-purple-500/40 bg-[#0e0b24] shadow-2xl shadow-purple-950/50 group">
               <img
                 src="https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801979/Michael_Tewogbde_Website_designer_mchvvw.png"
                 alt="Mitchell Adetayo - Mikky Digitalz Founder"
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#090a15] via-transparent to-transparent opacity-80" />
-              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#101226]/90 backdrop-blur-md border border-[#241d4a] flex items-center justify-between">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#070612] via-transparent to-transparent opacity-85" />
+              <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#0e0b24]/90 backdrop-blur-md border border-[#2c2263] flex items-center justify-between shadow-xl">
                 <div>
                   <h3 className="text-sm font-bold text-white">Mitchell Adetayo</h3>
-                  <p className="text-[11px] text-purple-400 font-medium">Founder & Web Architect @ Mikky Digitalz</p>
+                  <p className="text-[11px] text-purple-300 font-medium">Founder & Web Architect @ Mikky Digitalz</p>
                 </div>
-                <div className="w-8 h-8 rounded-full bg-purple-600/20 text-purple-400 flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-purple-600/25 text-purple-400 flex items-center justify-center border border-purple-500/30">
                   <CheckCircle2 className="w-4 h-4" />
                 </div>
               </div>
             </div>
 
             {/* Float badge */}
-            <div className="absolute -top-4 -right-4 bg-[#181533] border border-[#241d4a] p-3 rounded-2xl shadow-xl flex items-center gap-3">
+            <div className="absolute -top-4 -right-4 bg-[#161138] border border-[#2c2263] p-3 rounded-2xl shadow-2xl shadow-purple-950/50 flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center">
                 <Star className="w-5 h-5 fill-amber-400" />
               </div>
@@ -168,7 +173,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* WHAT I BUILD (CORE CAPABILITIES) */}
-      <section className="py-20 bg-[#101226] border-y border-[#1e2442]">
+      <section className="py-20 bg-[#0a081a] border-y border-[#261d56]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
@@ -189,16 +194,16 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div
                 key={srv.id}
                 onClick={() => onNavigate('services')}
-                className="p-6 rounded-2xl bg-[#181533] border border-[#241d4a] navy-card-hover cursor-pointer flex flex-col justify-between"
+                className="p-6 rounded-2xl bg-[#110d2c] border border-[#2c2263] navy-card-hover cursor-pointer flex flex-col justify-between shadow-lg"
               >
                 <div>
-                  <div className="w-10 h-10 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-purple-600/25 text-purple-300 flex items-center justify-center mb-4 border border-purple-500/30">
                     {iconMap[srv.iconName] || <Globe className="w-5 h-5" />}
                   </div>
                   <h3 className="text-lg font-bold text-white mb-2">{srv.title}</h3>
-                  <p className="text-xs text-slate-400 leading-relaxed mb-4 line-clamp-3">{srv.subtitle}</p>
+                  <p className="text-xs text-slate-300 leading-relaxed mb-4 line-clamp-3">{srv.subtitle}</p>
                 </div>
-                <div className="pt-4 border-t border-[#241d4a] flex items-center justify-between text-xs font-semibold text-purple-400">
+                <div className="pt-4 border-t border-[#261d56] flex items-center justify-between text-xs font-semibold text-purple-300">
                   <span>Turnaround: {srv.turnaroundTime}</span>
                   <ArrowRight className="w-4 h-4" />
                 </div>
@@ -227,21 +232,21 @@ export const HomePage: React.FC<HomePageProps> = ({
                 onClick={() => setActiveWorkflowStep(idx)}
                 className={`p-6 rounded-2xl border transition-all duration-200 cursor-pointer ${
                   isActive
-                    ? 'bg-purple-600 text-white border-purple-500 shadow-xl shadow-purple-600/30 scale-[1.02]'
-                    : 'bg-[#101226] text-slate-200 border-[#1e2442] hover:border-purple-500/40'
+                    ? 'bg-purple-600 text-white border-purple-400 shadow-2xl shadow-purple-600/40 scale-[1.02]'
+                    : 'bg-[#0e0b24] text-slate-200 border-[#261d56] hover:border-purple-500/50 hover:bg-[#140f33]'
                 }`}
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className={`text-2xl font-bold font-mono ${isActive ? 'text-white/80' : 'text-purple-400'}`}>
+                  <span className={`text-2xl font-bold font-mono ${isActive ? 'text-white/90' : 'text-purple-400'}`}>
                     {step.number}
                   </span>
-                  <Check className={`w-5 h-5 ${isActive ? 'text-white' : 'text-slate-600'}`} />
+                  <Check className={`w-5 h-5 ${isActive ? 'text-white' : 'text-purple-400/40'}`} />
                 </div>
                 <h3 className="text-xl font-bold mb-1 text-white">{step.title}</h3>
-                <p className={`text-xs font-semibold mb-3 uppercase tracking-wider ${isActive ? 'text-purple-200' : 'text-purple-400'}`}>
+                <p className={`text-xs font-semibold mb-3 uppercase tracking-wider ${isActive ? 'text-purple-100' : 'text-purple-300'}`}>
                   {step.short}
                 </p>
-                <p className={`text-xs leading-relaxed ${isActive ? 'text-white/90' : 'text-slate-400'}`}>
+                <p className={`text-xs leading-relaxed ${isActive ? 'text-white/95' : 'text-slate-300'}`}>
                   {step.description}
                 </p>
               </div>
@@ -251,7 +256,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* MEASURABLE OUTCOMES */}
-      <section className="py-20 bg-[#101226] text-white border-y border-[#1e2442]">
+      <section className="py-20 bg-[#0a081a] text-white border-y border-[#261d56]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <span className="text-xs uppercase tracking-widest text-purple-400 font-bold">Measurable Outcomes</span>
@@ -259,69 +264,69 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-            <div className="p-6 rounded-2xl bg-[#181533] border border-[#241d4a]">
-              <div className="w-10 h-10 rounded-full bg-purple-600/20 text-purple-400 flex items-center justify-center mx-auto mb-3">
+            <div className="p-6 rounded-2xl bg-[#110d2c] border border-[#2c2263] shadow-lg">
+              <div className="w-10 h-10 rounded-full bg-purple-600/25 text-purple-300 flex items-center justify-center mx-auto mb-3 border border-purple-500/30">
                 <TrendingUp className="w-5 h-5" />
               </div>
               <div className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">+49%</div>
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Avg. Lead Conversion Boost</div>
+              <div className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Avg. Lead Conversion Boost</div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#181533] border border-[#241d4a]">
-              <div className="w-10 h-10 rounded-full bg-purple-600/20 text-purple-400 flex items-center justify-center mx-auto mb-3">
+            <div className="p-6 rounded-2xl bg-[#110d2c] border border-[#2c2263] shadow-lg">
+              <div className="w-10 h-10 rounded-full bg-purple-600/25 text-purple-300 flex items-center justify-center mx-auto mb-3 border border-purple-500/30">
                 <Zap className="w-5 h-5" />
               </div>
               <div className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">99.8%</div>
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Average PageSpeed Score</div>
+              <div className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Average PageSpeed Score</div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#181533] border border-[#241d4a]">
-              <div className="w-10 h-10 rounded-full bg-purple-600/20 text-purple-400 flex items-center justify-center mx-auto mb-3">
+            <div className="p-6 rounded-2xl bg-[#110d2c] border border-[#2c2263] shadow-lg">
+              <div className="w-10 h-10 rounded-full bg-purple-600/25 text-purple-300 flex items-center justify-center mx-auto mb-3 border border-purple-500/30">
                 <Clock className="w-5 h-5" />
               </div>
               <div className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">14 Days</div>
-              <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider">Average Project Turnaround</div>
+              <div className="text-xs font-semibold text-slate-300 uppercase tracking-wider">Average Project Turnaround</div>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#181533] border border-[#241d4a]">
-              <div className="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto mb-3">
+            <div className="p-6 rounded-2xl bg-[#110d2c] border border-[#2c2263] shadow-lg">
+              <div className="w-10 h-10 rounded-full bg-purple-600/25 text-purple-300 flex items-center justify-center mx-auto mb-3 border border-purple-500/30">
                 <Award className="w-5 h-5" />
               </div>
               <div className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">98%</div>
-              <div className="text-xs font-semibold text-[#a78bfa] uppercase tracking-wider">Upwork Job Success Rate (90%+ JSS)</div>
+              <div className="text-xs font-semibold text-purple-300 uppercase tracking-wider">Upwork Job Success Rate (90%+ JSS)</div>
             </div>
           </div>
         </div>
       </section>
 
       {/* CLIENT REVIEWS & FEEDBACK */}
-      <section id="reviews" className="py-24 bg-[#090a15] border-b border-purple-900/30">
+      <section id="reviews" className="py-24 bg-[#070612] border-b border-[#261d56]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-bold border border-emerald-500/20 mb-3">
-              <Star className="w-3.5 h-3.5 fill-emerald-400" />
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/15 text-purple-300 text-xs font-bold border border-purple-500/30 mb-3">
+              <Star className="w-3.5 h-3.5 fill-purple-400 text-purple-400" />
               <span>UPWORK VERIFIED REVIEWS</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Client Reviews & Feedback</h2>
-            <p className="text-sm sm:text-base text-slate-400 mt-2">
+            <p className="text-sm sm:text-base text-slate-300 mt-2">
               Authentic 5.0★ ratings and feedback from business leaders, speakers, clinics, and e-commerce founders.
             </p>
           </div>
 
           {/* Upwork metrics bar */}
-          <div className="mb-14 p-6 rounded-2xl bg-[#0f0d22] border border-[#241d4a] shadow-xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-center divide-y md:divide-y-0 md:divide-x divide-[#241d4a]">
+          <div className="mb-14 p-6 rounded-2xl bg-[#0e0b24] border border-[#2c2263] shadow-xl">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-center divide-y md:divide-y-0 md:divide-x divide-[#261d56]">
               <a
                 href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 hover:bg-[#181533] rounded-xl transition-colors group cursor-pointer"
+                className="p-3 hover:bg-[#161138] rounded-xl transition-colors group cursor-pointer"
               >
                 <div className="flex items-center justify-center gap-1.5 text-amber-400 font-extrabold text-2xl sm:text-3xl">
                   <span>★ 5.0</span>
                   <span className="text-slate-400 text-sm font-normal">/ 5</span>
                 </div>
-                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-400 flex items-center justify-center gap-1">
+                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-300 flex items-center justify-center gap-1">
                   <span>Average Rating</span>
                   <ExternalLink className="w-3 h-3" />
                 </div>
@@ -331,10 +336,10 @@ export const HomePage: React.FC<HomePageProps> = ({
                 href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 hover:bg-[#181533] rounded-xl transition-colors group cursor-pointer"
+                className="p-3 hover:bg-[#161138] rounded-xl transition-colors group cursor-pointer"
               >
                 <div className="text-white font-extrabold text-2xl sm:text-3xl">30</div>
-                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-400 flex items-center justify-center gap-1">
+                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-300 flex items-center justify-center gap-1">
                   <span>Client Reviews</span>
                   <ExternalLink className="w-3 h-3" />
                 </div>
@@ -344,10 +349,10 @@ export const HomePage: React.FC<HomePageProps> = ({
                 href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 hover:bg-[#181533] rounded-xl transition-colors group cursor-pointer"
+                className="p-3 hover:bg-[#161138] rounded-xl transition-colors group cursor-pointer"
               >
                 <div className="text-emerald-400 font-extrabold text-2xl sm:text-3xl">98%</div>
-                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-400 flex items-center justify-center gap-1">
+                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-300 flex items-center justify-center gap-1">
                   <span>90%+ JSS Score</span>
                   <ExternalLink className="w-3 h-3" />
                 </div>
@@ -357,10 +362,10 @@ export const HomePage: React.FC<HomePageProps> = ({
                 href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 hover:bg-[#181533] rounded-xl transition-colors group cursor-pointer"
+                className="p-3 hover:bg-[#161138] rounded-xl transition-colors group cursor-pointer"
               >
                 <div className="text-purple-400 font-extrabold text-2xl sm:text-3xl">51</div>
-                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-400 flex items-center justify-center gap-1">
+                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-300 flex items-center justify-center gap-1">
                   <span>Jobs Completed</span>
                   <ExternalLink className="w-3 h-3" />
                 </div>
@@ -370,7 +375,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
           {/* Testimonial Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-[#101226] border border-[#1e2442] flex flex-col justify-between navy-card-hover">
+            <div className="p-8 rounded-2xl bg-[#0e0b24] border border-[#261d56] flex flex-col justify-between navy-card-hover shadow-lg">
               <div>
                 <div className="flex items-center gap-1 text-amber-400 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -381,7 +386,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   "Mikky redesigned our agency website on WordPress and Elementor. Speed went from 4.2s to 0.7s, and our consultation bookings doubled within two weeks. Exceptional attention to detail."
                 </p>
               </div>
-              <div className="pt-4 border-t border-[#1e2442] flex items-center justify-between">
+              <div className="pt-4 border-t border-[#261d56] flex items-center justify-between">
                 <div>
                   <h4 className="text-sm font-bold text-white">Marcus Vance</h4>
                   <p className="text-xs text-purple-400 font-medium">CEO & Speaker</p>
@@ -393,7 +398,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
 
-            <div className="p-8 rounded-2xl bg-[#101226] border border-[#1e2442] flex flex-col justify-between navy-card-hover">
+            <div className="p-8 rounded-2xl bg-[#0e0b24] border border-[#261d56] flex flex-col justify-between navy-card-hover shadow-lg">
               <div>
                 <div className="flex items-center gap-1 text-amber-400 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -404,7 +409,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   "Pixel-perfect conversion of our Figma designs. Mikky completed 5 custom pages in 10 days with zero bugs on mobile. Highly recommended!"
                 </p>
               </div>
-              <div className="pt-4 border-t border-[#1e2442] flex items-center justify-between">
+              <div className="pt-4 border-t border-[#261d56] flex items-center justify-between">
                 <div>
                   <h4 className="text-sm font-bold text-white">David Sterling</h4>
                   <p className="text-xs text-purple-400 font-medium">Managing Partner</p>
@@ -416,7 +421,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               </div>
             </div>
 
-            <div className="p-8 rounded-2xl bg-[#101226] border border-[#1e2442] flex flex-col justify-between navy-card-hover">
+            <div className="p-8 rounded-2xl bg-[#0e0b24] border border-[#261d56] flex flex-col justify-between navy-card-hover shadow-lg">
               <div>
                 <div className="flex items-center gap-1 text-amber-400 mb-4">
                   {[...Array(5)].map((_, i) => (
@@ -427,7 +432,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   "Rescued our broken Squarespace site right before launch. Mikky fixed our booking forms, mobile layouts, and custom CSS in 48 hours."
                 </p>
               </div>
-              <div className="pt-4 border-t border-[#1e2442] flex items-center justify-between">
+              <div className="pt-4 border-t border-[#261d56] flex items-center justify-between">
                 <div>
                   <h4 className="text-sm font-bold text-white">Dr. Elena Rostova</h4>
                   <p className="text-xs text-purple-400 font-medium">Founder & Dermatologist</p>
@@ -445,7 +450,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm transition-all shadow-lg shadow-emerald-600/20 cursor-pointer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-xl shadow-purple-600/30 hover:shadow-purple-500/50 cursor-pointer"
             >
               <span>View All 30 Reviews on Upwork</span>
               <ExternalLink className="w-4 h-4" />
@@ -455,7 +460,7 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SELECTED WORK & MOCKUPS */}
-      <section className="py-24 bg-[#101226] border-b border-[#1e2442]">
+      <section className="py-24 bg-[#0a081a] border-b border-[#261d56]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
@@ -476,20 +481,20 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div
                 key={proj.id}
                 onClick={() => onSelectProject(proj)}
-                className="group bg-[#181533] rounded-2xl border border-[#241d4a] overflow-hidden navy-card-hover cursor-pointer flex flex-col justify-between"
+                className="group bg-[#110d2c] rounded-2xl border border-[#2c2263] overflow-hidden navy-card-hover cursor-pointer flex flex-col justify-between shadow-xl"
               >
-                <div className="relative aspect-16/10 overflow-hidden bg-[#101226]">
+                <div className="relative aspect-16/10 overflow-hidden bg-[#0e0b24]">
                   <img
                     src={proj.mockupUrl || proj.thumbnail}
                     alt={proj.title}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-4 left-4 bg-purple-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow">
+                  <div className="absolute top-4 left-4 bg-purple-600 text-white text-xs font-semibold px-3 py-1.5 rounded-full shadow-md">
                     {proj.categoryLabel}
                   </div>
                   {proj.metricsHighlight && (
-                    <div className="absolute top-4 right-4 bg-emerald-600 text-white text-xs font-bold px-3 py-1.5 rounded-full shadow">
+                    <div className="absolute top-4 right-4 bg-purple-900/90 border border-purple-400/40 text-purple-200 text-xs font-bold px-3 py-1.5 rounded-full shadow backdrop-blur-md">
                       {proj.metricsHighlight}
                     </div>
                   )}
@@ -497,14 +502,14 @@ export const HomePage: React.FC<HomePageProps> = ({
 
                 <div className="p-6 flex-1 flex flex-col justify-between">
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-300 transition-colors">
                       {proj.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed mb-4">
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-4">
                       {proj.tagline}
                     </p>
                   </div>
-                  <div className="pt-4 border-t border-[#241d4a] flex items-center justify-between text-xs font-bold text-purple-400">
+                  <div className="pt-4 border-t border-[#261d56] flex items-center justify-between text-xs font-bold text-purple-400">
                     <span>Key Metric: {proj.result}</span>
                     <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                       View Details <ArrowRight className="w-4 h-4" />
@@ -518,7 +523,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="mt-12 text-center">
             <button
               onClick={() => onNavigate('work')}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-purple-600 text-white text-sm font-semibold hover:bg-purple-500 transition-colors shadow-lg shadow-purple-600/30 cursor-pointer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-purple-600 text-white text-sm font-semibold hover:bg-purple-500 transition-all shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50 cursor-pointer"
             >
               <span>Explore All Projects & Mockups</span>
               <ArrowRight className="w-4 h-4" />
@@ -528,18 +533,18 @@ export const HomePage: React.FC<HomePageProps> = ({
       </section>
 
       {/* SEO, GEO & AEO INSIGHTS SECTION */}
-      <section className="py-24 bg-[#090a15] border-b border-[#1e2442]">
+      <section className="py-24 bg-[#070612] border-b border-[#261d56]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-400 text-xs font-bold border border-purple-500/20 mb-2">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/15 text-purple-300 text-xs font-bold border border-purple-500/30 mb-2">
                 <Sparkles className="w-3.5 h-3.5 text-purple-400" />
                 <span>SEO • GEO • AEO ARCHITECTURE</span>
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                 Generative Search & Speed Playbooks
               </h2>
-              <p className="text-slate-400 text-sm mt-2 max-w-xl">
+              <p className="text-slate-300 text-sm mt-2 max-w-xl">
                 Engineering websites that rank on Google and get synthesized as authoritative answers by Perplexity, ChatGPT, and Gemini.
               </p>
             </div>
@@ -569,16 +574,16 @@ export const HomePage: React.FC<HomePageProps> = ({
                     onNavigate('blog', post.slug);
                   }
                 }}
-                className="group bg-[#0f0d22] rounded-3xl border border-[#241d4a] hover:border-purple-500/50 p-6 navy-card-hover cursor-pointer flex flex-col justify-between transition-all text-inherit no-underline"
+                className="group bg-[#0e0b24] rounded-3xl border border-[#2c2263] hover:border-purple-500/60 p-6 navy-card-hover cursor-pointer flex flex-col justify-between transition-all text-inherit no-underline shadow-lg"
               >
                 <div>
-                  <div className="relative aspect-16/10 rounded-2xl overflow-hidden mb-5 bg-[#181533]">
+                  <div className="relative aspect-16/10 rounded-2xl overflow-hidden mb-5 bg-[#161138]">
                     <img
                       src={post.featuredImage}
                       alt={post.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                     />
-                    <div className="absolute top-3 left-3 bg-[#090a15]/90 border border-purple-500/40 text-purple-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full backdrop-blur-md">
+                    <div className="absolute top-3 left-3 bg-[#070612]/90 border border-purple-500/40 text-purple-300 text-[11px] font-bold px-2.5 py-0.5 rounded-full backdrop-blur-md">
                       {post.category}
                     </div>
                   </div>
@@ -589,16 +594,16 @@ export const HomePage: React.FC<HomePageProps> = ({
                     <span>{post.readTime}</span>
                   </div>
 
-                  <h3 className="text-lg font-bold text-white group-hover:text-purple-400 transition-colors leading-snug mb-3">
+                  <h3 className="text-lg font-bold text-white group-hover:text-purple-300 transition-colors leading-snug mb-3">
                     {post.title}
                   </h3>
 
-                  <p className="text-xs text-slate-400 leading-relaxed line-clamp-3 mb-4">
+                  <p className="text-xs text-slate-300 leading-relaxed line-clamp-3 mb-4">
                     {post.summary}
                   </p>
                 </div>
 
-                <div className="pt-4 border-t border-[#181533] flex items-center justify-between text-xs font-bold text-purple-400">
+                <div className="pt-4 border-t border-[#261d56] flex items-center justify-between text-xs font-bold text-purple-400">
                   <span className="text-slate-400 font-normal">By Mitchell Adetayo</span>
                   <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                     Read Article <ArrowRight className="w-3.5 h-3.5" />
@@ -617,7 +622,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   onNavigate('blog');
                 }
               }}
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#181533] border border-[#241d4a] text-purple-300 text-sm font-semibold hover:bg-[#241d4a] hover:text-white transition-colors cursor-pointer"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#110d2c] border border-[#2c2263] text-purple-300 text-sm font-semibold hover:bg-[#18123a] hover:border-purple-500/50 hover:text-white transition-all cursor-pointer shadow-md"
             >
               <span>Explore All Insights in the Journal</span>
               <ArrowRight className="w-4 h-4" />
@@ -628,10 +633,10 @@ export const HomePage: React.FC<HomePageProps> = ({
 
       {/* BOTTOM CTA BANNER */}
       <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="p-10 sm:p-16 rounded-3xl bg-gradient-to-b from-[#101226] to-[#181533] border border-[#241d4a] text-white space-y-6 max-w-4xl mx-auto shadow-2xl">
+        <div className="p-10 sm:p-16 rounded-3xl bg-gradient-to-b from-[#0e0b24] via-[#140f33] to-[#1c1445] border border-[#3b2a75] text-white space-y-6 max-w-4xl mx-auto shadow-2xl shadow-purple-950/60">
           <span className="text-xs uppercase tracking-widest text-purple-400 font-bold">Get Started Today</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
-            Have a project in mind? Let's build something that performs.
+            Have a project in mind? Let's build something that <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-purple-200">performs</span>.
           </h2>
           <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
             Free 20-minute discovery consultation on Calendly. Zero sales fluff — clear advice, honest timelines, and custom proposal options.
@@ -640,7 +645,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={onOpenCalendly}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-base transition-all duration-150 flex items-center justify-center gap-2 shadow-lg shadow-purple-600/30 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-base transition-all duration-150 flex items-center justify-center gap-2 shadow-xl shadow-purple-600/40 hover:shadow-purple-500/60 cursor-pointer hover:scale-105 active:scale-95"
             >
               <span>Book Call on Calendly</span>
               <ArrowRight className="w-5 h-5" />
@@ -648,7 +653,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
             <button
               onClick={() => onNavigate('pricing')}
-              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#181533] text-slate-200 border border-[#241d4a] font-semibold text-base hover:bg-[#241d4a] hover:text-white transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer"
+              className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#110d2c] text-slate-200 border border-[#2c2263] font-semibold text-base hover:bg-[#18123a] hover:border-purple-500/50 hover:text-white transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer shadow-md"
             >
               <span>View Pricing Plans</span>
               <ArrowRight className="w-5 h-5" />

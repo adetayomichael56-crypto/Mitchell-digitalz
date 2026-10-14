@@ -47,7 +47,10 @@ export const PricingPage: React.FC<PricingPageProps> = ({
   const estimatedTotal = basePrice + addonsTotal;
 
   return (
-    <div className="w-full py-12 md:py-16 bg-[#090a15] text-[#f1f5f9]">
+    <div className="w-full py-12 md:py-16 bg-[#070612] text-[#f1f5f9] relative overflow-hidden">
+      {/* Background ambient radial purple glow */}
+      <div className="absolute top-20 left-1/4 w-[600px] h-[350px] bg-purple-600/10 blur-[130px] pointer-events-none rounded-full -z-10" />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
@@ -56,9 +59,9 @@ export const PricingPage: React.FC<PricingPageProps> = ({
             Investment & Packages
           </span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mt-2 mb-4">
-            Transparent Pricing.
+            Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-purple-200">Pricing</span>.
           </h1>
-          <p className="text-base sm:text-lg text-slate-400 leading-relaxed">
+          <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
             Every project with Mitchell Adetayo (Mikky Digitalz) begins with a free consultation call to confirm scope and goals. Zero hidden fees, no unexpected upsells — just clear deliverables and fixed investment options.
           </p>
         </div>
@@ -72,12 +75,12 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                 key={plan.id}
                 className={`relative rounded-3xl p-8 sm:p-10 flex flex-col justify-between transition-all duration-200 navy-card-hover ${
                   isPopular
-                    ? 'bg-purple-600 text-white shadow-2xl border-2 border-purple-500 scale-[1.02] z-10'
-                    : 'bg-[#0f0d22] text-slate-100 border border-[#241d4a] shadow-xl'
+                    ? 'bg-purple-600 text-white shadow-2xl shadow-purple-600/40 border-2 border-purple-400 scale-[1.02] z-10'
+                    : 'bg-[#0e0b24] text-slate-100 border border-[#261d56] shadow-xl hover:border-purple-500/50'
                 }`}
               >
                 {isPopular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-white text-purple-900 text-xs font-bold uppercase tracking-wider shadow-md flex items-center gap-1.5">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-white text-purple-950 text-xs font-bold uppercase tracking-wider shadow-md flex items-center gap-1.5">
                     <Sparkles className="w-3.5 h-3.5 text-purple-600" />
                     <span>Most Popular Choice</span>
                   </div>
@@ -86,7 +89,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                 <div>
                   <div className="mb-6">
                     <h3 className="text-xl font-bold mb-2 text-white">{plan.name}</h3>
-                    <p className={`text-xs leading-relaxed ${isPopular ? 'text-white/80' : 'text-slate-400'}`}>
+                    <p className={`text-xs leading-relaxed ${isPopular ? 'text-white/90' : 'text-slate-300'}`}>
                       {plan.description}
                     </p>
                   </div>
@@ -97,7 +100,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                         {plan.price}
                       </span>
                       {plan.numericPrice && (
-                        <span className={`text-xs font-medium uppercase ${isPopular ? 'text-white/60' : 'text-slate-400'}`}>
+                        <span className={`text-xs font-medium uppercase ${isPopular ? 'text-white/80' : 'text-slate-400'}`}>
                           / fixed total
                         </span>
                       )}
@@ -105,14 +108,14 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                   </div>
 
                   <div className="space-y-3 mb-8">
-                    <span className={`text-xs font-bold uppercase tracking-wider block ${isPopular ? 'text-white/80' : 'text-purple-400'}`}>
+                    <span className={`text-xs font-bold uppercase tracking-wider block ${isPopular ? 'text-white/90' : 'text-purple-400'}`}>
                       What's Included:
                     </span>
                     {plan.features.map((feat, i) => (
                       <div key={i} className="flex items-start gap-2.5 text-xs sm:text-sm">
                         <div
                           className={`w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5 ${
-                            isPopular ? 'bg-white text-purple-600' : 'bg-purple-600/20 text-purple-400'
+                            isPopular ? 'bg-white text-purple-600' : 'bg-purple-600/25 text-purple-300 border border-purple-500/30'
                           }`}
                         >
                           <Check className="w-3 h-3" />
@@ -129,8 +132,8 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                   onClick={() => onOpenContact(plan.name)}
                   className={`w-full py-3.5 px-6 rounded-full text-sm font-semibold transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer shadow-lg ${
                     isPopular
-                      ? 'bg-white text-purple-900 hover:bg-white/90 font-bold'
-                      : 'bg-purple-600 text-white hover:bg-purple-500 shadow-purple-600/30'
+                      ? 'bg-white text-purple-950 hover:bg-slate-100 font-bold shadow-xl'
+                      : 'bg-purple-600 text-white hover:bg-purple-500 shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50'
                   }`}
                 >
                   <span>{plan.ctaLabel}</span>
@@ -142,7 +145,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
         </div>
 
         {/* INTERACTIVE PROJECT ESTIMATOR / CALCULATOR */}
-        <div className="mb-20 p-8 sm:p-12 rounded-3xl bg-[#0f0d22] border border-[#241d4a] shadow-2xl">
+        <div className="mb-20 p-8 sm:p-12 rounded-3xl bg-[#0e0b24] border border-[#261d56] shadow-2xl">
           <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-8">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-purple-400 mb-1">
@@ -153,7 +156,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                 Calculate Your Custom Project Investment
               </h2>
             </div>
-            <p className="text-xs text-slate-400 max-w-sm">
+            <p className="text-xs text-slate-300 max-w-sm">
               Select a base tier and toggle optional add-ons to preview an instant estimated investment total.
             </p>
           </div>
@@ -176,8 +179,8 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                         onClick={() => setSelectedBaseTier(tier.id)}
                         className={`p-3 rounded-xl text-left border transition-all cursor-pointer ${
                           isSelected
-                            ? 'bg-purple-600 text-white border-purple-500 font-bold shadow-lg shadow-purple-600/30'
-                            : 'bg-[#181533] text-slate-200 border-[#241d4a] hover:border-purple-500/40'
+                            ? 'bg-purple-600 text-white border-purple-400 font-bold shadow-xl shadow-purple-600/35'
+                            : 'bg-[#130f2e] text-slate-200 border-[#261d56] hover:border-purple-500/40'
                         }`}
                       >
                         <div className="text-xs">{tier.name}</div>
@@ -202,8 +205,8 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                         onClick={() => toggleAddon(addon.id)}
                         className={`p-3.5 rounded-xl border flex items-center justify-between cursor-pointer transition-colors ${
                           isChecked
-                            ? 'bg-[#181533] border-purple-500 shadow-xs'
-                            : 'bg-[#0f0d22] border-[#241d4a] hover:bg-[#181533]'
+                            ? 'bg-[#161138] border-purple-500 shadow-sm'
+                            : 'bg-[#110d2c] border-[#261d56] hover:bg-[#161138]'
                         }`}
                       >
                         <div className="flex items-center gap-3">
@@ -211,7 +214,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                             className={`w-5 h-5 rounded-md flex items-center justify-center border transition-colors ${
                               isChecked
                                 ? 'bg-purple-600 border-purple-500 text-white'
-                                : 'border-[#333a6b] bg-[#0f0d22]'
+                                : 'border-[#3b2d6e] bg-[#0e0b24]'
                             }`}
                           >
                             {isChecked && <Check className="w-3.5 h-3.5" />}
@@ -232,8 +235,8 @@ export const PricingPage: React.FC<PricingPageProps> = ({
             </div>
 
             {/* Right Summary Box (5 cols) */}
-            <div className="lg:col-span-5 bg-[#181533] text-white p-6 sm:p-8 rounded-2xl border border-[#241d4a] shadow-xl space-y-6">
-              <div className="border-b border-[#241d4a] pb-4">
+            <div className="lg:col-span-5 bg-[#130f2e] text-white p-6 sm:p-8 rounded-2xl border border-[#261d56] shadow-xl space-y-6">
+              <div className="border-b border-[#261d56] pb-4">
                 <span className="text-xs uppercase tracking-widest text-purple-400 font-semibold">
                   Estimated Total Investment
                 </span>
@@ -249,7 +252,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
 
               {/* Breakdown */}
               <div className="space-y-2 text-xs">
-                <div className="flex justify-between items-center py-1 border-b border-[#241d4a]">
+                <div className="flex justify-between items-center py-1 border-b border-[#261d56]">
                   <span className="text-slate-300">{currentTier?.name}</span>
                   <span className="font-mono font-bold text-purple-400">{currentTier?.price}</span>
                 </div>
@@ -272,7 +275,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
                     `${currentTier?.name} ($${estimatedTotal.toLocaleString()})`
                   )
                 }
-                className="w-full py-3.5 px-6 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm transition-all shadow-lg shadow-purple-600/30 cursor-pointer flex items-center justify-center gap-2"
+                className="w-full py-3.5 px-6 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-bold text-xs sm:text-sm transition-all shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50 cursor-pointer flex items-center justify-center gap-2"
               >
                 <span>Inquire With This Estimated Scope</span>
                 <ArrowRight className="w-4 h-4" />
@@ -294,22 +297,22 @@ export const PricingPage: React.FC<PricingPageProps> = ({
             return (
               <div
                 key={faq.id}
-                className="rounded-2xl bg-[#0f0d22] border border-[#241d4a] overflow-hidden transition-colors"
+                className="rounded-2xl bg-[#0e0b24] border border-[#261d56] overflow-hidden transition-colors"
               >
                 <button
                   onClick={() => toggleFaq(faq.id)}
-                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-purple-400 transition-colors cursor-pointer"
+                  className="w-full p-5 sm:p-6 text-left flex items-center justify-between text-sm sm:text-base font-bold text-white hover:text-purple-300 transition-colors cursor-pointer"
                 >
                   <span>{faq.question}</span>
                   {isOpen ? (
                     <ChevronUp className="w-4 h-4 text-purple-400 shrink-0 ml-4" />
                   ) : (
-                    <ChevronDown className="w-4 h-4 text-slate-500 shrink-0 ml-4" />
+                    <ChevronDown className="w-4 h-4 text-slate-400 shrink-0 ml-4" />
                   )}
                 </button>
 
                 {isOpen && (
-                  <div className="px-5 sm:px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-[#181533] pt-4">
+                  <div className="px-5 sm:px-6 pb-6 text-xs sm:text-sm text-slate-300 leading-relaxed border-t border-[#261d56] pt-4">
                     {faq.answer}
                   </div>
                 )}
