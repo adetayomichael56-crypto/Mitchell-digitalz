@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Onest', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090a15;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e2442;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8b5cf6;
+}
+
+.navy-glow {
+  box-shadow: 0 12px 32px -8px #8b5cf659;
+}
+
+.navy-card-hover {
+  transition: all 0.25s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.navy-card-hover:hover {
+  border-color: #8b5cf6;
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px -8px #8b5cf64d;
+}
+
+.website-scroll-container {
+  height: 280px;
+  position: relative;
+  overflow: hidden;
+}
+
+.website-scroll-img {
+  will-change: transform;
+  width: 100%;
+  transition: transform 6s;
+  display: block;
+  transform: translateY(0);
+}
+
+.website-scroll-container:hover .website-scroll-img {
+  transform: translateY(calc(280px - 100%));
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

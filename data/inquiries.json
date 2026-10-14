@@ -1,0 +1,83 @@
+[
+  {
+    "id": "MK-9136",
+    "fullName": "Elena Rostova",
+    "email": "elena@studioforma.com",
+    "projectType": "Squarespace Custom Build",
+    "budgetRange": "$3,000 - $5,000",
+    "timeline": "Standard (2-4 weeks)",
+    "message": "Need a luxury portfolio revamp on Squarespace with smooth mobile booking.",
+    "preferredContact": "email",
+    "referralSource": "Direct Website",
+    "timestamp": "2026-10-13T15:48:33.369Z",
+    "status": "new",
+    "notes": "",
+    "securityMeta": {
+      "verifiedHuman": true,
+      "submissionDurationSeconds": 1790306513,
+      "securityFlags": []
+    }
+  },
+  {
+    "id": "MK-8927",
+    "fullName": "Marcus Brody",
+    "email": "marcus@brodymedia.com",
+    "businessName": "Brody Media",
+    "projectType": "Shopify Storefront",
+    "budgetRange": "$2,500 - $5,000",
+    "timeline": "Standard (2-4 weeks)",
+    "message": "Need an e-commerce shop for our high-end audio products with clean checkout flow.",
+    "preferredContact": "email",
+    "referralSource": "Direct Website",
+    "timestamp": "2026-10-13T15:31:38.559Z",
+    "status": "new",
+    "notes": "",
+    "securityMeta": {
+      "verifiedHuman": true,
+      "submissionDurationSeconds": 1790305499,
+      "securityFlags": []
+    }
+  },
+  {
+    "id": "MK-7821",
+    "fullName": "Sarah Jenkins",
+    "email": "sarah@apexventures.io",
+    "phone": "+1 (415) 890-3321",
+    "businessName": "Apex Ventures",
+    "projectType": "WordPress & Elementor",
+    "budgetRange": "$2,500 - $5,000",
+    "timeline": "Standard (2-4 weeks)",
+    "message": "Hi Mitchell! We loved your Cyrion case study. We need a modern, high-speed corporate site with custom ACF blocks for our venture portfolio. Need sub-1s load times.",
+    "preferredContact": "email",
+    "referralSource": "Upwork",
+    "timestamp": "2026-10-12T14:32:00.000Z",
+    "status": "new",
+    "notes": "Interested in ACF blocks and sub-1s optimization like Cyrion project.",
+    "securityMeta": {
+      "verifiedHuman": true,
+      "submissionDurationSeconds": 42,
+      "securityFlags": []
+    }
+  },
+  {
+    "id": "MK-6409",
+    "fullName": "David Alabi",
+    "email": "david@luminate-atelier.com",
+    "phone": "+234 803 123 4567",
+    "businessName": "Luminate Atelier",
+    "projectType": "Squarespace Custom Build",
+    "budgetRange": "$1,000 - $2,500",
+    "timeline": "Urgent (< 2 weeks)",
+    "message": "Looking to revamp our luxury boutique studio website on Squarespace. Clean typography, mobile elegance, and fast booking flow required.",
+    "preferredContact": "whatsapp",
+    "referralSource": "Instagram",
+    "timestamp": "2026-10-10T09:15:00.000Z",
+    "status": "contacted",
+    "notes": "Sent WhatsApp introduction message. Waiting on high-res photography assets.",
+    "securityMeta": {
+      "verifiedHuman": true,
+      "submissionDurationSeconds": 28,
+      "securityFlags": []
+    }
+  }
+]

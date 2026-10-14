@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+
+# Explicit directives for major search engines and AI answer crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://mikkydigitalz.netlify.app/sitemap.xml
