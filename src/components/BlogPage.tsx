@@ -69,7 +69,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
         canonicalLink.setAttribute('rel', 'canonical');
         document.head.appendChild(canonicalLink);
       }
-      canonicalLink.setAttribute('href', `https://mikkydigitalz.netlify.app/blog/${activePost.slug}`);
+      canonicalLink.setAttribute('href', `https://mikky-digitalz.netlify.app/blog/${activePost.slug}`);
 
       // Inject structured data
       const scriptId = 'blog-schema-jsonld';
@@ -86,7 +86,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
         '@graph': [
           {
             '@type': 'BlogPosting',
-            '@id': `https://mikkydigitalz.netlify.app/blog/${activePost.slug}#article`,
+            '@id': `https://mikky-digitalz.netlify.app/blog/${activePost.slug}#article`,
             'headline': activePost.title,
             'description': activePost.metaDescription,
             'image': activePost.featuredImage,
@@ -96,7 +96,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               '@type': 'Person',
               'name': 'Mitchell Adetayo',
               'jobTitle': 'Lead Web Architect',
-              'url': 'https://mikkydigitalz.netlify.app/#founder',
+              'url': 'https://mikky-digitalz.netlify.app/#founder',
             },
             'publisher': {
               '@type': 'Organization',
@@ -108,12 +108,12 @@ export const BlogPage: React.FC<BlogPageProps> = ({
             },
             'mainEntityOfPage': {
               '@type': 'WebPage',
-              '@id': `https://mikkydigitalz.netlify.app/blog/${activePost.slug}`,
+              '@id': `https://mikky-digitalz.netlify.app/blog/${activePost.slug}`,
             },
           },
           ...(activePost.faqs && activePost.faqs.length > 0 ? [{
             '@type': 'FAQPage',
-            '@id': `https://mikkydigitalz.netlify.app/blog/${activePost.slug}#faq`,
+            '@id': `https://mikky-digitalz.netlify.app/blog/${activePost.slug}#faq`,
             'mainEntity': activePost.faqs.map((f) => ({
               '@type': 'Question',
               'name': f.question,
@@ -136,7 +136,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
       }
       const canonicalLink = document.querySelector('link[rel="canonical"]');
       if (canonicalLink) {
-        canonicalLink.setAttribute('href', 'https://mikkydigitalz.netlify.app/blog');
+        canonicalLink.setAttribute('href', 'https://mikky-digitalz.netlify.app/blog');
       }
     }
   }, [activePost]);
@@ -174,7 +174,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
       '@graph': [
         {
           '@type': 'BlogPosting',
-          '@id': `https://mikkydigitalz.netlify.app/#/blog/${activePost.slug}`,
+          '@id': `https://mikky-digitalz.netlify.app/#/blog/${activePost.slug}`,
           'headline': activePost.title,
           'description': activePost.metaDescription,
           'datePublished': activePost.publishedDate,
@@ -189,7 +189,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           'publisher': {
             '@type': 'Organization',
             'name': 'Mikky Digitalz',
-            'url': 'https://mikkydigitalz.netlify.app',
+            'url': 'https://mikky-digitalz.netlify.app',
             'logo': {
               '@type': 'ImageObject',
               'url': 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801863/My_real_logo_no_bg_uzbovb.png',
@@ -197,7 +197,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
           },
           'mainEntityOfPage': {
             '@type': 'WebPage',
-            '@id': `https://mikkydigitalz.netlify.app/#/blog/${activePost.slug}`,
+            '@id': `https://mikky-digitalz.netlify.app/#/blog/${activePost.slug}`,
           },
         },
         {
@@ -218,19 +218,19 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               '@type': 'ListItem',
               'position': 1,
               'name': 'Home',
-              'item': 'https://mikkydigitalz.netlify.app/#/home',
+              'item': 'https://mikky-digitalz.netlify.app/#/home',
             },
             {
               '@type': 'ListItem',
               'position': 2,
               'name': 'Blog',
-              'item': 'https://mikkydigitalz.netlify.app/#/blog',
+              'item': 'https://mikky-digitalz.netlify.app/#/blog',
             },
             {
               '@type': 'ListItem',
               'position': 3,
               'name': activePost.title,
-              'item': `https://mikkydigitalz.netlify.app/#/blog/${activePost.slug}`,
+              'item': `https://mikky-digitalz.netlify.app/#/blog/${activePost.slug}`,
             },
           ],
         },

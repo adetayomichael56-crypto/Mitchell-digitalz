@@ -89,24 +89,24 @@ function injectPostMetadata(baseHtml: string, post: BlogPost): string {
     "@graph": [
       {
         "@type": "BlogPosting",
-        "@id": `https://mikkydigitalz.netlify.app/blog/${post.slug}#article`,
+        "@id": `https://mikky-digitalz.netlify.app/blog/${post.slug}#article`,
         "headline": post.title,
         "name": post.seoTitle,
         "description": post.metaDescription,
         "image": post.featuredImage,
         "datePublished": "2026-10-12T08:00:00+00:00",
         "dateModified": "2026-10-13T09:00:00+00:00",
-        "mainEntityOfPage": `https://mikkydigitalz.netlify.app/blog/${post.slug}`,
+        "mainEntityOfPage": `https://mikky-digitalz.netlify.app/blog/${post.slug}`,
         "author": {
           "@type": "Person",
           "name": "Mitchell Adetayo",
           "jobTitle": "Lead Web Architect",
-          "url": "https://mikkydigitalz.netlify.app/#founder"
+          "url": "https://mikky-digitalz.netlify.app/#founder"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Mikky Digitalz",
-          "url": "https://mikkydigitalz.netlify.app/",
+          "url": "https://mikky-digitalz.netlify.app/",
           "logo": {
             "@type": "ImageObject",
             "url": "https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801863/My_real_logo_no_bg_uzbovb.png"
@@ -115,7 +115,7 @@ function injectPostMetadata(baseHtml: string, post: BlogPost): string {
       },
       ...(post.faqs && post.faqs.length > 0 ? [{
         "@type": "FAQPage",
-        "@id": `https://mikkydigitalz.netlify.app/blog/${post.slug}#faq`,
+        "@id": `https://mikky-digitalz.netlify.app/blog/${post.slug}#faq`,
         "mainEntity": post.faqs.map(faq => ({
           "@type": "Question",
           "name": faq.question,
@@ -129,8 +129,8 @@ function injectPostMetadata(baseHtml: string, post: BlogPost): string {
   };
 
   const extraHead = `
-    <link rel="canonical" href="https://mikkydigitalz.netlify.app/blog/${post.slug}" />
-    <meta property="og:url" content="https://mikkydigitalz.netlify.app/blog/${post.slug}" />
+    <link rel="canonical" href="https://mikky-digitalz.netlify.app/blog/${post.slug}" />
+    <meta property="og:url" content="https://mikky-digitalz.netlify.app/blog/${post.slug}" />
     <script type="application/ld+json">
 ${JSON.stringify(articleSchema, null, 2)}
     </script>
@@ -414,7 +414,7 @@ async function startServer() {
       res.setHeader('Content-Type', 'text/plain; charset=utf-8');
       res.sendFile(robotsPath);
     } else {
-      res.type('text/plain').send('User-agent: *\nAllow: /\nSitemap: https://mikkydigitalz.netlify.app/sitemap.xml\n');
+      res.type('text/plain').send('User-agent: *\nAllow: /\nSitemap: https://mikky-digitalz.netlify.app/sitemap.xml\n');
     }
   });
 

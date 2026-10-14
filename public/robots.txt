@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# Explicit directives for major search engines and AI answer crawlers
+# Search Engines & AI Crawlers
 User-agent: Googlebot
 Allow: /
 
@@ -23,4 +23,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://mikkydigitalz.netlify.app/sitemap.xml
+Sitemap: https://mikky-digitalz.netlify.app/sitemap.xml

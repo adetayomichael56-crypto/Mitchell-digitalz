@@ -6,70 +6,70 @@
 
   <!-- Core Pages -->
   <url>
-    <loc>https://mikkydigitalz.netlify.app/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/services</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/services</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/work</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/work</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/pricing</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/pricing</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/blog</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/blog</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
 
   <!-- High-Impact SEO, GEO & AEO Blog Articles -->
   <url>
-    <loc>https://mikkydigitalz.netlify.app/blog/generative-engine-optimization-geo-guide-web-design</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/blog/generative-engine-optimization-geo-guide-web-design</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/blog/aeo-google-ai-overviews-position-zero-framework</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/blog/aeo-google-ai-overviews-position-zero-framework</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/blog/sub-second-wordpress-elementor-speed-optimization-2026</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/blog/sub-second-wordpress-elementor-speed-optimization-2026</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/blog/enterprise-shopify-custom-liquid-conversion-architecture</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/blog/enterprise-shopify-custom-liquid-conversion-architecture</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/blog/wordpress-vs-squarespace-vs-shopify-decision-matrix</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/blog/wordpress-vs-squarespace-vs-shopify-decision-matrix</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://mikkydigitalz.netlify.app/blog/figma-to-code-responsive-breakpoint-layout-guide</loc>
-    <lastmod>2026-10-13</lastmod>
+    <loc>https://mikky-digitalz.netlify.app/blog/figma-to-code-responsive-breakpoint-layout-guide</loc>
+    <lastmod>2026-10-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>

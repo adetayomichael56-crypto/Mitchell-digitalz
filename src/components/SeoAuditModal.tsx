@@ -108,7 +108,7 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
     },
   ];
 
-  const currentHost = typeof window !== 'undefined' ? window.location.origin : 'https://mikkydigitalz.netlify.app';
+  const currentHost = typeof window !== 'undefined' ? window.location.origin : 'https://mikky-digitalz.netlify.app';
   const verificationFileUrl = `${currentHost}/googlee63b711c38e98de3.html`;
   const sitemapUrl = `${currentHost}/sitemap.xml`;
 

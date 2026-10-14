@@ -27,7 +27,7 @@ export const PORTFOLIO_PROJECTS: ProjectItem[] = [
     deliverables: ['Custom Theme Architecture', 'Lead Capture Funnel', 'Dynamic Demo Booking', 'Interactive Features Grid'],
     turnaround: '14 Days',
     imageUrl: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80',
-    livePreviewUrl: 'https://mikkydigitalz.netlify.app/#/home',
+    livePreviewUrl: 'https://mikky-digitalz.netlify.app/#/home',
   },
   {
     id: 'pirus',
@@ -42,7 +42,7 @@ export const PORTFOLIO_PROJECTS: ProjectItem[] = [
     deliverables: ['Custom Case Study Showcase', 'Interactive Inquiry Flow', 'Dark Glassmorphism UI', 'Mobile Optimization'],
     turnaround: '16 Days',
     imageUrl: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80',
-    livePreviewUrl: 'https://mikkydigitalz.netlify.app/#/home',
+    livePreviewUrl: 'https://mikky-digitalz.netlify.app/#/home',
   },
   {
     id: 'xable',
@@ -57,7 +57,7 @@ export const PORTFOLIO_PROJECTS: ProjectItem[] = [
     deliverables: ['Figma Pixel-Perfect Code', 'Booking Funnel', 'Service Matrix', 'Schema SEO'],
     turnaround: '12 Days',
     imageUrl: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?auto=format&fit=crop&w=1200&q=80',
-    livePreviewUrl: 'https://mikkydigitalz.netlify.app/#/home',
+    livePreviewUrl: 'https://mikky-digitalz.netlify.app/#/home',
   },
   {
     id: 'iconi',
@@ -72,7 +72,7 @@ export const PORTFOLIO_PROJECTS: ProjectItem[] = [
     deliverables: ['Custom Grid Gallery', 'Print Shop Integration', 'Automated Inquiry Routing', 'Mobile Speed Audit'],
     turnaround: '9 Days',
     imageUrl: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?auto=format&fit=crop&w=1200&q=80',
-    livePreviewUrl: 'https://mikkydigitalz.netlify.app/#/home',
+    livePreviewUrl: 'https://mikky-digitalz.netlify.app/#/home',
   },
   {
     id: 'apex-roofing',
@@ -87,7 +87,7 @@ export const PORTFOLIO_PROJECTS: ProjectItem[] = [
     deliverables: ['Emergency CTA Floating Bar', 'Instant Estimate Calculator', 'Review Badges', 'Google Analytics 4 Tracking'],
     turnaround: '10 Days',
     imageUrl: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80',
-    livePreviewUrl: 'https://mikkydigitalz.netlify.app/#/home',
+    livePreviewUrl: 'https://mikky-digitalz.netlify.app/#/home',
   },
   {
     id: 'velour-store',
@@ -102,6 +102,6 @@ export const PORTFOLIO_PROJECTS: ProjectItem[] = [
     deliverables: ['Custom Product Template', 'One-Click Upsell Drawer', 'Subscription Funnel', 'Inventory Sync'],
     turnaround: '18 Days',
     imageUrl: 'https://images.unsplash.com/photo-1526947425960-945c6e72858f?auto=format&fit=crop&w=1200&q=80',
-    livePreviewUrl: 'https://mikkydigitalz.netlify.app/#/home',
+    livePreviewUrl: 'https://mikky-digitalz.netlify.app/#/home',
   },
 ];

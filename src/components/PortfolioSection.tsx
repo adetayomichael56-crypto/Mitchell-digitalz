@@ -190,7 +190,7 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({ onRequestSim
             {/* CTA in modal */}
             <div className="pt-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
               <a
-                href={activeModalProject.livePreviewUrl || 'https://mikkydigitalz.netlify.app/#/home'}
+                href={activeModalProject.livePreviewUrl || 'https://mikky-digitalz.netlify.app/#/home'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xs text-slate-400 hover:text-white flex items-center gap-1.5"
