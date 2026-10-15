@@ -70,7 +70,17 @@
   </head>
   <body class="bg-[#070612] text-[#f1f5f9] antialiased selection:bg-[#7c3aed]/40 selection:text-white">
     <div id="root"></div>
+    <!-- Hidden copy of the contact form so Netlify Forms can detect it at deploy time.
+         Field names must match what ContactDrawer.tsx sends. -->
+    <form name="inquiry" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="service" />
+      <input type="text" name="budget" />
+      <textarea name="message"></textarea>
+      <input type="text" name="reference" />
+      <input type="text" name="bot-field" />
+    </form>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
