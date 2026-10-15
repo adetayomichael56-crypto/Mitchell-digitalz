@@ -207,7 +207,7 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
               </div>
 
               <p className="text-sm text-slate-300 leading-relaxed max-w-sm">
-                Thank you <strong className="text-white">{submittedInquiry.fullName}</strong>. Your inquiry details for <strong className="text-purple-400">{submittedInquiry.projectType}</strong> have been securely recorded in Mitchell's queue.
+                Thank you <strong className="text-white">{submittedInquiry.fullName}</strong>. Your inquiry details for <strong className="text-purple-400">{submittedInquiry.projectType}</strong> have been securely recorded in Michael's queue.
               </p>
 
               <div className="w-full bg-[#130f2e] p-4 rounded-xl text-left border border-[#261d56] space-y-2 text-xs">
@@ -226,12 +226,12 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
               </div>
 
               <p className="text-xs text-slate-400">
-                Mitchell will personally review your brief and reply within 4 to 24 business hours.
+                Michael will personally review your brief and reply within 4 to 24 business hours.
               </p>
 
               <div className="pt-2 flex flex-col sm:flex-row gap-3 w-full">
                 <a
-                  href={`https://wa.me/2349024877275?text=Hi%20Mitchell,%20I%20just%20submitted%20project%20inquiry%20${submittedInquiry.id}%20on%20MikkyDigitalz.`}
+                  href={`https://wa.me/2349024877275?text=Hi%20Michael,%20I%20just%20submitted%20project%20inquiry%20${submittedInquiry.id}%20on%20MikkyDigitalz.`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex-1 py-3 px-4 rounded-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20"
@@ -252,7 +252,7 @@ export const ContactDrawer: React.FC<ContactDrawerProps> = ({
             /* Contact / Inquiry Form */
             <form onSubmit={handleSubmit} className="space-y-5">
               <p className="text-sm text-slate-300 leading-relaxed">
-                Tell Mitchell Adetayo (Mikky Digitalz) about your project goals. I'll review your details and respond within 24 hours with custom scope options.
+                Tell Michael Adetayo (Mikky Digitalz) about your project goals. I'll review your details and respond within 24 hours with custom scope options.
               </p>
 
               {/* Honeypot hidden input */}

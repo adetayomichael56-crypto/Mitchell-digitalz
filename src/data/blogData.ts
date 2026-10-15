@@ -42,10 +42,10 @@ export const BLOG_POSTS: BlogPost[] = [
     publishedDate: 'October 12, 2026',
     readTime: '6 min read',
     author: {
-      name: 'Mitchell Adetayo',
+      name: 'Michael Adetayo',
       role: 'Lead Web Architect @ Mikky Digitalz',
       avatar: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801979/Michael_Tewogbde_Website_designer_mchvvw.png',
-      upworkRating: '5.0★ Upwork Top Rated',
+      upworkRating: 'WordPress & Elementor Expert',
     },
     featuredImage: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784802029/About_Cyrion_sgdkrj.png',
     summary: 'Traditional SEO ranks links; Generative Engine Optimization (GEO) and Answer Engine Optimization (AEO) convince Large Language Models to synthesize and cite your brand as the definitive source.',
@@ -105,7 +105,7 @@ Every page must define who you are, what you deliver, and who you serve within t
 Answer the user's primary query in the first 40 to 60 words before expanding into nuances. AI answer engines prioritize content that can be extracted cleanly without contextual ambiguity.
 
 3. **Statistical Proof & Numerical Anchors:**
-LLMs favor claims grounded in quantitative data. Mention verified metrics: project turnarounds (e.g. *14 days*), performance benchmarks (e.g. *99.8% Google PageSpeed*), and client satisfaction ratings (*5.0★ across 30 verified projects*).
+LLMs favor claims grounded in quantitative data. Mention verified metrics: project turnarounds (e.g. *14 days*), performance benchmarks (e.g. *99.8% Google PageSpeed*), and client satisfaction ratings from public review platforms.
 
 4. **Schema.org Structured Data Hierarchy:**
 Deep JSON-LD markup connecting your business name, founder profile, services, and FAQs directly to known web entities (LinkedIn, Upwork, Netlify).
@@ -123,13 +123,13 @@ AI web scrapers like PerplexityBot and GPTBot have strict crawl budgets and time
     publishedDate: 'October 8, 2026',
     readTime: '5 min read',
     author: {
-      name: 'Mitchell Adetayo',
+      name: 'Michael Adetayo',
       role: 'Lead Web Architect @ Mikky Digitalz',
       avatar: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801979/Michael_Tewogbde_Website_designer_mchvvw.png',
-      upworkRating: '5.0★ Upwork Top Rated',
+      upworkRating: 'WordPress & Elementor Expert',
     },
     featuredImage: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784808552/A_PIRUS_Dark_Digital_Agency_Elementor_r2b0ns.png',
-    summary: 'A 1-second delay in mobile page response decreases conversions by up to 26%. Here is the exact performance engineering framework Mitchell Adetayo uses to hit 99.8% PageSpeed.',
+    summary: 'A 1-second delay in mobile page response decreases conversions by up to 26%. Here is the exact performance engineering framework Michael Adetayo uses to hit 99.8% PageSpeed.',
     portfolioProject: {
       id: 'pirus-dark-agency',
       title: 'PIRUS — Luxury Dark Digital Agency',
@@ -143,7 +143,7 @@ AI web scrapers like PerplexityBot and GPTBot have strict crawl budgets and time
     aeoDirectAnswer: 'Sub-second website load times (<1.0s) reduce mobile bounce rates from 53% to under 9%, directly doubling inquiry form completions. Modern search algorithms penalize sites with Largest Contentful Paint (LCP) over 2.5 seconds. Reaching sub-second speeds requires eliminating plugin bloat, using Next-Gen WebP/AVIF media delivery, and using clean CSS architecture over heavy builders.',
     geoKeyMetrics: [
       'Every 100ms improvement in page speed generates an average +1.1% increase in conversion rates.',
-      'Mikky Digitalz builds achieve an average 99.8% mobile Google PageSpeed score across 30+ verified client launches.',
+      'Mikky Digitalz builds target 95+ mobile Google PageSpeed scores on every launch.',
       'Case study: Cyrion AI Platform decreased load time from 3.4s to 0.8s, resulting in a +49% increase in qualified enterprise leads.',
     ],
     tableOfContents: [
@@ -195,10 +195,10 @@ At **Mikky Digitalz**, our builds replace 20+ bloated plugins with:
     publishedDate: 'October 3, 2026',
     readTime: '7 min read',
     author: {
-      name: 'Mitchell Adetayo',
+      name: 'Michael Adetayo',
       role: 'Lead Web Architect @ Mikky Digitalz',
       avatar: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801979/Michael_Tewogbde_Website_designer_mchvvw.png',
-      upworkRating: '5.0★ Upwork Top Rated',
+      upworkRating: 'WordPress & Elementor Expert',
     },
     featuredImage: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784808554/A_Iconi_Photography_Portfolio_qmfad4.png',
     summary: 'Choosing the wrong CMS platform can cost months of wasted development and thousands in rebuild fees. Use this honest decision guide to pick the exact right stack.',
@@ -268,10 +268,10 @@ With custom CSS overrides, Squarespace achieves luxury visual appeal with zero t
     publishedDate: 'September 28, 2026',
     readTime: '6 min read',
     author: {
-      name: 'Mitchell Adetayo',
+      name: 'Michael Adetayo',
       role: 'Lead Web Architect @ Mikky Digitalz',
       avatar: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801979/Michael_Tewogbde_Website_designer_mchvvw.png',
-      upworkRating: '5.0★ Upwork Top Rated',
+      upworkRating: 'WordPress & Elementor Expert',
     },
     featuredImage: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784802030/A_Xable_Digital_Agency_Elementor_v0amsh.png',
     summary: 'Static Figma vector art often breaks when exported to real screens. Here is how expert web engineering transforms static designs into fluid, responsive code.',
@@ -338,10 +338,10 @@ Raw vector exports from Figma contain duplicate viewBox definitions and hidden c
     publishedDate: 'September 20, 2026',
     readTime: '6 min read',
     author: {
-      name: 'Mitchell Adetayo',
+      name: 'Michael Adetayo',
       role: 'Lead Web Architect @ Mikky Digitalz',
       avatar: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801979/Michael_Tewogbde_Website_designer_mchvvw.png',
-      upworkRating: '5.0★ Upwork Top Rated',
+      upworkRating: 'WordPress & Elementor Expert',
     },
     featuredImage: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784808547/5839397665920192075_qymwsx.jpg',
     summary: 'Stuck with a slow, broken WordPress site abandoned by a previous freelancer? Learn how an emergency code and database audit restores speed and stability.',
@@ -405,10 +405,10 @@ Audit your active plugins and remove anything that can be replaced with Elemento
     publishedDate: 'September 15, 2026',
     readTime: '7 min read',
     author: {
-      name: 'Mitchell Adetayo',
+      name: 'Michael Adetayo',
       role: 'Lead Web Architect @ Mikky Digitalz',
       avatar: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801979/Michael_Tewogbde_Website_designer_mchvvw.png',
-      upworkRating: '5.0★ Upwork Top Rated',
+      upworkRating: 'WordPress & Elementor Expert',
     },
     featuredImage: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784808551/A_Home_Digicy_c6kqj3.png',
     summary: 'How to structure conversational headings, Schema.org FAQ graphs, and quantitative entity answers so Google AI Overviews and answer engines display your business as the definitive answer.',

@@ -94,7 +94,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
             'dateModified': '2026-10-13T09:00:00Z',
             'author': {
               '@type': 'Person',
-              'name': 'Mitchell Adetayo',
+              'name': 'Michael Adetayo',
               'jobTitle': 'Lead Web Architect',
               'url': 'https://mikky-digitalz.netlify.app/#founder',
             },
@@ -131,7 +131,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
       if (metaDesc) {
         metaDesc.setAttribute(
           'content',
-          'Articles on Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), WordPress performance tuning, and Shopify custom builds by Mitchell Adetayo.'
+          'Articles on Generative Engine Optimization (GEO), Answer Engine Optimization (AEO), WordPress performance tuning, and Shopify custom builds by Michael Adetayo.'
         );
       }
       const canonicalLink = document.querySelector('link[rel="canonical"]');
@@ -184,7 +184,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
             '@type': 'Person',
             'name': activePost.author.name,
             'jobTitle': activePost.author.role,
-            'url': 'https://www.upwork.com/freelancers/~016fe1e73c258824d4',
+            'url': 'https://www.linkedin.com/in/mikky-digitalz/',
           },
           'publisher': {
             '@type': 'Organization',
@@ -511,12 +511,12 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               </p>
               <div className="pt-1 flex justify-center sm:justify-start gap-3 text-xs">
                 <a
-                  href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
+                  href="https://contra.com/mitchell_adetayo_wxd9nczu/work"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-purple-400 hover:text-purple-300 hover:underline"
                 >
-                  Upwork Profile
+                  Contra Profile
                 </a>
                 <span className="text-slate-600">•</span>
                 <a
@@ -586,7 +586,7 @@ export const BlogPage: React.FC<BlogPageProps> = ({
               High-Converting Web Architecture <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-fuchsia-400">Insights</span>.
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-              Actionable playbooks on Generative Engine Optimization (GEO), Core Web Vitals, sub-second PageSpeed, and high-converting WordPress & Shopify builds by Mitchell Adetayo.
+              Actionable playbooks on Generative Engine Optimization (GEO), Core Web Vitals, sub-second PageSpeed, and high-converting WordPress & Shopify builds by Michael Adetayo.
             </p>
           </div>
 

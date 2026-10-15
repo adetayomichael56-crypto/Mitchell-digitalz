@@ -62,7 +62,7 @@ export const PricingPage: React.FC<PricingPageProps> = ({
             Transparent <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-purple-200">Pricing</span>.
           </h1>
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-            Every project with Mitchell Adetayo (Mikky Digitalz) begins with a free consultation call to confirm scope and goals. Zero hidden fees, no unexpected upsells — just clear deliverables and fixed investment options.
+            Every project with Michael Adetayo (Mikky Digitalz) begins with a free consultation call to confirm scope and goals. Zero hidden fees, no unexpected upsells — just clear deliverables and fixed investment options.
           </p>
         </div>
 

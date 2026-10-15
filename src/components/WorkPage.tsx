@@ -57,7 +57,7 @@ export const WorkPage: React.FC<WorkPageProps> = ({
             Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-purple-200">Projects & Mockups</span>.
           </h1>
           <p className="text-base sm:text-lg text-slate-300 leading-relaxed">
-            Real websites designed and engineered by Mitchell Adetayo (Mikky Digitalz). Hover over any website screenshot below to see the interactive full page scroll effect, or switch to mockup view!
+            Real websites designed and engineered by Michael Adetayo (Mikky Digitalz). Hover over any website screenshot below to see the interactive full page scroll effect, or switch to mockup view!
           </p>
         </div>
 

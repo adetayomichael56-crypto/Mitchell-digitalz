@@ -53,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInbox, inquiryCount }) => 
                 </span>
               </div>
               <p className="text-[11px] text-slate-400 font-medium tracking-wide">
-                Mitchell Adetayo • Web Architect
+                Michael Adetayo • Web Architect
               </p>
             </div>
           </a>
@@ -112,7 +112,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenInbox, inquiryCount }) => 
 
             {/* Direct WhatsApp link */}
             <a
-              href="https://wa.me/2349024877275?text=Hi%20Mitchell,%20I'd%20like%20to%20discuss%20a%20website%20project%20with%20Mikky%20Digitalz"
+              href="https://wa.me/2349024877275?text=Hi%20Michael,%20I'd%20like%20to%20discuss%20a%20website%20project%20with%20Mikky%20Digitalz"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-lg bg-slate-900/90 text-emerald-400 hover:text-emerald-300 hover:bg-slate-800 border border-slate-800 hover:border-emerald-500/40 transition-all"

@@ -41,7 +41,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ onComplete }) => {
       {/* Top Header */}
       <div className="w-full flex justify-between items-center text-xs tracking-widest text-purple-300/70 uppercase font-mono">
         <span>Mikky Digitalz</span>
-        <span>Mitchell Adetayo</span>
+        <span>Michael Adetayo</span>
       </div>
 
       {/* Center Branding */}

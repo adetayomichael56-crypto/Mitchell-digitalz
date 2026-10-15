@@ -49,7 +49,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartInquiry }) => {
 
           {/* Subtitle */}
           <p className="text-base sm:text-lg md:text-xl text-slate-300 max-w-2xl mx-auto font-normal leading-relaxed">
-            I am <strong className="text-white font-semibold">Mitchell Adetayo</strong> (Mikky Digitalz). I build lightning-fast, conversion-engineered websites on <span className="text-cyan-300 font-medium">WordPress & Elementor</span>, <span className="text-cyan-300 font-medium">Squarespace</span>, and <span className="text-cyan-300 font-medium">Shopify</span>—delivered in 14 days or less.
+            I am <strong className="text-white font-semibold">Michael Adetayo</strong> (Mikky Digitalz). I build lightning-fast, conversion-engineered websites on <span className="text-cyan-300 font-medium">WordPress & Elementor</span>, <span className="text-cyan-300 font-medium">Squarespace</span>, and <span className="text-cyan-300 font-medium">Shopify</span>—delivered in 14 days or less.
           </p>
 
           {/* CTA Buttons */}
@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({ onStartInquiry }) => {
             </button>
 
             <a
-              href="https://wa.me/2349024877275?text=Hi%20Mitchell,%20I%20saw%20your%20portfolio%20on%20MikkyDigitalz%20and%20want%20to%20inquire%20about%20a%20website"
+              href="https://wa.me/2349024877275?text=Hi%20Michael,%20I%20saw%20your%20portfolio%20on%20MikkyDigitalz%20and%20want%20to%20inquire%20about%20a%20website"
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto px-6 py-4 rounded-xl font-heading font-semibold text-sm text-slate-200 bg-slate-900/90 hover:bg-slate-800 border border-slate-700 hover:border-emerald-500/50 transition-all flex items-center justify-center gap-2"

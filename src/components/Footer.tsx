@@ -147,12 +147,12 @@ export const Footer: React.FC<FooterProps> = ({
               </button>
             )}
             <a
-              href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
+              href="https://contra.com/mitchell_adetayo_wxd9nczu/work"
               target="_blank"
               rel="noopener noreferrer"
               className="text-left text-sm text-slate-400 hover:text-purple-300 hover:underline transition-colors py-1 cursor-pointer flex items-center gap-1"
             >
-              <span>Upwork Reviews (5.0★)</span>
+              <span>Contra Profile</span>
               <ExternalLink className="w-3 h-3" />
             </a>
           </div>
@@ -214,7 +214,7 @@ export const Footer: React.FC<FooterProps> = ({
                 Official Profiles & Social Channels
               </h4>
               <p className="text-xs text-slate-400 mt-0.5">
-                Connect with Mitchell Adetayo (Mikky Digitalz) across platforms:
+                Connect with Michael Adetayo (Mikky Digitalz) across platforms:
               </p>
             </div>
           </div>
@@ -223,7 +223,7 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Copyright */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-          <p>© {new Date().getFullYear()} Mikky Digitalz (Mitchell Adetayo). All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Mikky Digitalz (Michael Adetayo). All rights reserved.</p>
           <div className="flex gap-6 text-slate-400">
             <span className="hover:text-purple-300 transition-colors">WordPress & Elementor</span>
             <span className="hover:text-purple-300 transition-colors">Squarespace</span>

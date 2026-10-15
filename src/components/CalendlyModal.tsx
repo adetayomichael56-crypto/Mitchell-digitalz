@@ -27,7 +27,7 @@ export const CalendlyModal: React.FC<CalendlyModalProps> = ({ isOpen, onClose })
             </div>
             <div>
               <h3 className="text-base sm:text-lg font-extrabold text-white leading-tight">
-                Schedule a Consultation — Mitchell Adetayo
+                Schedule a Consultation — Michael Adetayo
               </h3>
               <p className="text-xs text-purple-300 font-medium">
                 Book a live video meeting directly on Calendly

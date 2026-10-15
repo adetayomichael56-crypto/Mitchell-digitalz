@@ -98,7 +98,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-              Hi, I'm <strong className="text-white">Mitchell Adetayo</strong> (Mikky Digitalz). I design and build ultra-fast, responsive <span className="text-purple-300 font-medium">WordPress & Elementor</span>, <span className="text-purple-300 font-medium">Squarespace</span>, and <span className="text-purple-300 font-medium">Shopify</span> websites engineered to turn visitors into paying clients.
+              Hi, I'm <strong className="text-white">Michael Adetayo</strong> (Mikky Digitalz). I design and build ultra-fast, responsive <span className="text-purple-300 font-medium">WordPress & Elementor</span>, <span className="text-purple-300 font-medium">Squarespace</span>, and <span className="text-purple-300 font-medium">Shopify</span> websites engineered to turn visitors into paying clients.
             </p>
 
             {/* CTAs */}
@@ -120,12 +120,12 @@ export const HomePage: React.FC<HomePageProps> = ({
               </button>
             </div>
 
-            {/* Upwork status & Social pills */}
+            {/* Availability & Social pills */}
             <div className="inline-flex flex-col gap-3 p-4 rounded-2xl bg-[#110d2c] border border-[#2c2263] text-xs sm:text-sm text-slate-300 w-full shadow-lg">
               <div className="flex items-center gap-3">
                 <div className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse shrink-0" />
-                <span className="font-semibold text-purple-300">Upwork Top Rated:</span>
-                <span className="text-slate-300">5.0★ Rating across 30 verified client projects.</span>
+                <span className="font-semibold text-purple-300">Available for new projects:</span>
+                <span className="text-slate-300">Based in Nigeria, working with clients worldwide.</span>
               </div>
               <div className="pt-2 border-t border-[#261d56]">
                 <span className="block text-[11px] font-bold uppercase tracking-wider text-purple-400 mb-2">
@@ -141,14 +141,14 @@ export const HomePage: React.FC<HomePageProps> = ({
             <div className="relative w-full max-w-md aspect-4/5 rounded-3xl overflow-hidden border-2 border-purple-500/40 bg-[#0e0b24] shadow-2xl shadow-purple-950/50 group">
               <img
                 src="https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801979/Michael_Tewogbde_Website_designer_mchvvw.png"
-                alt="Mitchell Adetayo - Mikky Digitalz Founder"
+                alt="Michael Adetayo - Mikky Digitalz Founder"
                 className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#070612] via-transparent to-transparent opacity-85" />
               <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-[#0e0b24]/90 backdrop-blur-md border border-[#2c2263] flex items-center justify-between shadow-xl">
                 <div>
-                  <h3 className="text-sm font-bold text-white">Mitchell Adetayo</h3>
+                  <h3 className="text-sm font-bold text-white">Michael Adetayo</h3>
                   <p className="text-[11px] text-purple-300 font-medium">Founder & Web Architect @ Mikky Digitalz</p>
                 </div>
                 <div className="w-8 h-8 rounded-full bg-purple-600/25 text-purple-400 flex items-center justify-center border border-purple-500/30">
@@ -163,8 +163,8 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <Star className="w-5 h-5 fill-amber-400" />
               </div>
               <div>
-                <div className="text-xs font-bold text-white">5.0 / 5.0 Stars</div>
-                <div className="text-[10px] text-purple-300">30 Verified Reviews</div>
+                <div className="text-xs font-bold text-white">WordPress & Elementor</div>
+                <div className="text-[10px] text-purple-300">Expert Website Builds</div>
               </div>
             </div>
           </div>
@@ -292,8 +292,8 @@ export const HomePage: React.FC<HomePageProps> = ({
               <div className="w-10 h-10 rounded-full bg-purple-600/25 text-purple-300 flex items-center justify-center mx-auto mb-3 border border-purple-500/30">
                 <Award className="w-5 h-5" />
               </div>
-              <div className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">98%</div>
-              <div className="text-xs font-semibold text-purple-300 uppercase tracking-wider">Upwork Job Success Rate (90%+ JSS)</div>
+              <div className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight mb-2">BSc</div>
+              <div className="text-xs font-semibold text-purple-300 uppercase tracking-wider">Computer Science, University of Ilorin</div>
             </div>
           </div>
         </div>
@@ -305,72 +305,12 @@ export const HomePage: React.FC<HomePageProps> = ({
           <div className="text-center max-w-2xl mx-auto mb-12">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-500/15 text-purple-300 text-xs font-bold border border-purple-500/30 mb-3">
               <Star className="w-3.5 h-3.5 fill-purple-400 text-purple-400" />
-              <span>UPWORK VERIFIED REVIEWS</span>
+              <span>CLIENT FEEDBACK</span>
             </div>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">Client Reviews & Feedback</h2>
             <p className="text-sm sm:text-base text-slate-300 mt-2">
-              Authentic 5.0★ ratings and feedback from business leaders, speakers, clinics, and e-commerce founders.
+              What working together looks like for business leaders, speakers, clinics, and e-commerce founders.
             </p>
-          </div>
-
-          {/* Upwork metrics bar */}
-          <div className="mb-14 p-6 rounded-2xl bg-[#0e0b24] border border-[#2c2263] shadow-xl">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center text-center divide-y md:divide-y-0 md:divide-x divide-[#261d56]">
-              <a
-                href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 hover:bg-[#161138] rounded-xl transition-colors group cursor-pointer"
-              >
-                <div className="flex items-center justify-center gap-1.5 text-amber-400 font-extrabold text-2xl sm:text-3xl">
-                  <span>★ 5.0</span>
-                  <span className="text-slate-400 text-sm font-normal">/ 5</span>
-                </div>
-                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-300 flex items-center justify-center gap-1">
-                  <span>Average Rating</span>
-                  <ExternalLink className="w-3 h-3" />
-                </div>
-              </a>
-
-              <a
-                href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 hover:bg-[#161138] rounded-xl transition-colors group cursor-pointer"
-              >
-                <div className="text-white font-extrabold text-2xl sm:text-3xl">30</div>
-                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-300 flex items-center justify-center gap-1">
-                  <span>Client Reviews</span>
-                  <ExternalLink className="w-3 h-3" />
-                </div>
-              </a>
-
-              <a
-                href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 hover:bg-[#161138] rounded-xl transition-colors group cursor-pointer"
-              >
-                <div className="text-emerald-400 font-extrabold text-2xl sm:text-3xl">98%</div>
-                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-300 flex items-center justify-center gap-1">
-                  <span>90%+ JSS Score</span>
-                  <ExternalLink className="w-3 h-3" />
-                </div>
-              </a>
-
-              <a
-                href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-3 hover:bg-[#161138] rounded-xl transition-colors group cursor-pointer"
-              >
-                <div className="text-purple-400 font-extrabold text-2xl sm:text-3xl">51</div>
-                <div className="text-xs font-semibold text-slate-400 mt-1 group-hover:text-purple-300 flex items-center justify-center gap-1">
-                  <span>Jobs Completed</span>
-                  <ExternalLink className="w-3 h-3" />
-                </div>
-              </a>
-            </div>
           </div>
 
           {/* Testimonial Cards */}
@@ -391,10 +331,6 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <h4 className="text-sm font-bold text-white">Marcus Vance</h4>
                   <p className="text-xs text-purple-400 font-medium">CEO & Speaker</p>
                 </div>
-                <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-semibold border border-emerald-500/20">
-                  <Check className="w-3 h-3" />
-                  <span>Verified</span>
-                </div>
               </div>
             </div>
 
@@ -413,10 +349,6 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <div>
                   <h4 className="text-sm font-bold text-white">David Sterling</h4>
                   <p className="text-xs text-purple-400 font-medium">Managing Partner</p>
-                </div>
-                <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-semibold border border-emerald-500/20">
-                  <Check className="w-3 h-3" />
-                  <span>Verified</span>
                 </div>
               </div>
             </div>
@@ -437,24 +369,8 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <h4 className="text-sm font-bold text-white">Dr. Elena Rostova</h4>
                   <p className="text-xs text-purple-400 font-medium">Founder & Dermatologist</p>
                 </div>
-                <div className="flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-[11px] font-semibold border border-emerald-500/20">
-                  <Check className="w-3 h-3" />
-                  <span>Verified</span>
-                </div>
               </div>
             </div>
-          </div>
-
-          <div className="mt-12 text-center">
-            <a
-              href="https://www.upwork.com/freelancers/~016fe1e73c258824d4"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm transition-all shadow-xl shadow-purple-600/30 hover:shadow-purple-500/50 cursor-pointer"
-            >
-              <span>View All 30 Reviews on Upwork</span>
-              <ExternalLink className="w-4 h-4" />
-            </a>
           </div>
         </div>
       </section>
@@ -604,7 +520,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 </div>
 
                 <div className="pt-4 border-t border-[#261d56] flex items-center justify-between text-xs font-bold text-purple-400">
-                  <span className="text-slate-400 font-normal">By Mitchell Adetayo</span>
+                  <span className="text-slate-400 font-normal">By Michael Adetayo</span>
                   <span className="inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                     Read Article <ArrowRight className="w-3.5 h-3.5" />
                   </span>

@@ -5,7 +5,7 @@ export const TestimonialsSection: React.FC = () => {
   const testimonials = [
     {
       quote:
-        'Mitchell is hands down the most skilled web developer I have hired on Upwork. He engineered our enterprise WordPress platform with custom ACF blocks in just 12 days. Our mobile Google PageSpeed is a solid 99!',
+        'Michael is hands down the most skilled web developer I have hired on Upwork. He engineered our enterprise WordPress platform with custom ACF blocks in just 12 days. Our mobile Google PageSpeed is a solid 99!',
       author: 'Marcus Vance',
       role: 'Founder & CEO, TechVentures London',
       project: 'WordPress & Elementor Architecture',
@@ -23,7 +23,7 @@ export const TestimonialsSection: React.FC = () => {
     },
     {
       quote:
-        'Our Shopify conversion rate jumped by 38% after Mitchell rebuilt our product pages and cart drawer. Fast, responsive, communicative, and gave us a full video tutorial of how to manage our inventory.',
+        'Our Shopify conversion rate jumped by 38% after Michael rebuilt our product pages and cart drawer. Fast, responsive, communicative, and gave us a full video tutorial of how to manage our inventory.',
       author: 'Julian Thorne',
       role: 'E-commerce Director, Apothecary Co.',
       project: 'Shopify Storefront 2.0',
@@ -32,7 +32,7 @@ export const TestimonialsSection: React.FC = () => {
     },
     {
       quote:
-        'Outstanding attention to detail. No bloated plugins, clean CSS, and delivered 2 days ahead of schedule. Mitchell understands both visual aesthetics and technical performance.',
+        'Outstanding attention to detail. No bloated plugins, clean CSS, and delivered 2 days ahead of schedule. Michael understands both visual aesthetics and technical performance.',
       author: 'Amina Bello',
       role: 'Managing Partner, Apex Legal Group',
       project: 'Custom Corporate Website',

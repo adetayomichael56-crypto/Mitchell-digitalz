@@ -287,7 +287,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                     href={`mailto:${selectedInquiry.email}?subject=${encodeURIComponent(
                       `Mikky Digitalz — Scoped Proposal for ${selectedInquiry.projectType} [${selectedInquiry.id}]`
                     )}&body=${encodeURIComponent(
-                      `Hi ${selectedInquiry.fullName},\n\nThank you for reaching out via Mikky Digitalz regarding your ${selectedInquiry.projectType} project.\n\nI have reviewed your requirements and would love to share a clear milestone plan and timeline...\n\nBest regards,\nMitchell Adetayo (Mikky Digitalz)\nWhatsApp: +234 9024877275\n`
+                      `Hi ${selectedInquiry.fullName},\n\nThank you for reaching out via Mikky Digitalz regarding your ${selectedInquiry.projectType} project.\n\nI have reviewed your requirements and would love to share a clear milestone plan and timeline...\n\nBest regards,\nMichael Adetayo (Mikky Digitalz)\nWhatsApp: +234 9024877275\n`
                     )}`}
                     className="p-3 rounded-2xl bg-purple-950/40 hover:bg-purple-900/50 border border-purple-700/40 text-purple-300 text-xs font-semibold flex items-center justify-center gap-2 transition-colors"
                   >
@@ -298,7 +298,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                   {selectedInquiry.phone ? (
                     <a
                       href={`https://wa.me/${selectedInquiry.phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(
-                        `Hi ${selectedInquiry.fullName}, Mitchell here from Mikky Digitalz regarding your inquiry (${selectedInquiry.id}) for ${selectedInquiry.projectType}.`
+                        `Hi ${selectedInquiry.fullName}, Michael here from Mikky Digitalz regarding your inquiry (${selectedInquiry.id}) for ${selectedInquiry.projectType}.`
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -349,7 +349,7 @@ export const InquiryManagerModal: React.FC<InquiryManagerModalProps> = ({
                 <div>
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="text-xs font-bold uppercase tracking-wider text-purple-400">
-                      Private Notes (Mitchell only)
+                      Private Notes (Michael only)
                     </h4>
                     <button
                       onClick={handleSaveNotes}

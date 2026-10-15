@@ -10,10 +10,10 @@ export const WhatsAppChatbot: React.FC = () => {
   const waPhone = '+234 9024877275';
 
   const quickPrompts = [
-    '👋 Hi Mitchell, I need a new website quote!',
+    '👋 Hi Michael, I need a new website quote!',
     '🎨 I need a UI/UX & Website Redesign.',
     '⚡ I want to clone or rebuild my existing site.',
-    '💼 Interested in hiring you on Upwork/Fiverr.',
+    '💼 Interested in hiring you on Fiverr/Contra.',
   ];
 
   const handleToggle = () => {
@@ -50,7 +50,7 @@ export const WhatsAppChatbot: React.FC = () => {
                 <div className="w-10 h-10 rounded-full bg-[#130f2e] border-2 border-purple-400/40 p-0.5 overflow-hidden flex items-center justify-center">
                   <img
                     src="https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801863/My_real_logo_no_bg_uzbovb.png"
-                    alt="Mitchell Adetayo"
+                    alt="Michael Adetayo"
                     className="w-full h-full object-contain"
                     referrerPolicy="no-referrer"
                   />
@@ -59,7 +59,7 @@ export const WhatsAppChatbot: React.FC = () => {
               </div>
 
               <div>
-                <h4 className="text-sm font-bold leading-tight">Mitchell Adetayo</h4>
+                <h4 className="text-sm font-bold leading-tight">Michael Adetayo</h4>
                 <p className="text-[11px] text-purple-200/90 flex items-center gap-1 font-medium">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   <span>Online • Direct WhatsApp Assistant</span>
@@ -87,7 +87,7 @@ export const WhatsAppChatbot: React.FC = () => {
             <div className="flex items-start gap-2">
               <div className="max-w-[85%] bg-[#130f2e] border border-[#261d56] text-slate-200 p-3 rounded-2xl rounded-tl-xs shadow-xs space-y-1">
                 <p className="leading-relaxed">
-                  Hi there! 👋 I am Mitchell Adetayo. Ready to discuss your high-converting website build? Pick a shortcut below or send a custom question!
+                  Hi there! 👋 I am Michael Adetayo. Ready to discuss your high-converting website build? Pick a shortcut below or send a custom question!
                 </p>
                 <span className="text-[9px] text-slate-400 block text-right">Just now</span>
               </div>

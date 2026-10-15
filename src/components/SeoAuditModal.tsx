@@ -85,7 +85,7 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
     {
       title: 'Schema.org JSON-LD Entities (Organization, BlogPosting, FAQPage)',
       status: 'Active on all articles',
-      description: 'Deep structured graph linking Mitchell Adetayo (founder & author), Upwork profile, business entity, and FAQ accordions for Position Zero rich snippets.',
+      description: 'Deep structured graph linking Michael Adetayo (founder & author), LinkedIn and Contra profiles, business entity, and FAQ accordions for Position Zero rich snippets.',
       badge: 'Rich Results',
       icon: Cpu,
       color: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/30',
@@ -352,7 +352,7 @@ export const SeoAuditModal: React.FC<SeoAuditModalProps> = ({
               <div className="p-3.5 rounded-xl bg-[#070612] border border-[#261d56]">
                 <div className="font-bold text-purple-300 mb-1">4. Add Authority Backlinks</div>
                 <p className="text-slate-400 leading-relaxed">
-                  Put your site URL on your <strong className="text-white">Upwork profile</strong>, <strong className="text-white">LinkedIn</strong>, and <strong className="text-white">GitHub</strong>. These high-authority backlinks establish domain E-E-A-T and fast-track search presence.
+                  Put your site URL on your <strong className="text-white">Contra and Fiverr profiles</strong>, <strong className="text-white">LinkedIn</strong>, and <strong className="text-white">GitHub</strong>. These high-authority backlinks establish domain E-E-A-T and fast-track search presence.
                 </p>
               </div>
 

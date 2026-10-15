@@ -225,7 +225,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 </div>
                 <div>
                   <h3 className="font-heading text-lg font-bold text-white">
-                    Mitchell Adetayo
+                    Michael Adetayo
                   </h3>
                   <p className="text-xs text-slate-400">Founder & Principal Web Architect</p>
                 </div>
@@ -249,7 +249,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
 
                 {/* WhatsApp */}
                 <a
-                  href="https://wa.me/2349024877275?text=Hi%20Mitchell,%20I%20have%20a%20website%20inquiry%20via%20MikkyDigitalz"
+                  href="https://wa.me/2349024877275?text=Hi%20Michael,%20I%20have%20a%20website%20inquiry%20via%20MikkyDigitalz"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-3 rounded-xl bg-slate-950/60 border border-slate-800/80 text-slate-300 hover:border-emerald-500/40 transition-colors group"
@@ -324,7 +324,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     Inquiry Securely Received!
                   </h3>
                   <p className="text-sm text-slate-300 max-w-md mx-auto">
-                    Thank you, <strong className="text-white">{submittedInquiry.fullName}</strong>. Your project brief has been logged into Mitchell's priority queue.
+                    Thank you, <strong className="text-white">{submittedInquiry.fullName}</strong>. Your project brief has been logged into Michael's priority queue.
                   </p>
                 </div>
 
@@ -358,7 +358,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>What happens next?</span>
                   </div>
-                  <p>1. Mitchell will review your brief within 4 hours.</p>
+                  <p>1. Michael will review your brief within 4 hours.</p>
                   <p>2. You will receive an initial architecture breakdown and milestone pricing.</p>
                   <p>3. If urgent, tap the WhatsApp button below to chat right away with your inquiry ID.</p>
                 </div>
@@ -366,13 +366,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                 {/* WhatsApp Quick Chat Action */}
                 <div className="pt-2 flex flex-col sm:flex-row gap-3">
                   <a
-                    href={`https://wa.me/2349024877275?text=Hi%20Mitchell,%20I%20just%20submitted%20project%20inquiry%20${submittedInquiry.id}%20for%20a%20${encodeURIComponent(submittedInquiry.projectType)}%20build.`}
+                    href={`https://wa.me/2349024877275?text=Hi%20Michael,%20I%20just%20submitted%20project%20inquiry%20${submittedInquiry.id}%20for%20a%20${encodeURIComponent(submittedInquiry.projectType)}%20build.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 py-3 px-4 rounded-xl text-xs font-bold text-slate-950 bg-emerald-400 hover:bg-emerald-300 transition-all flex items-center justify-center gap-2 shadow-lg shadow-emerald-500/20"
                   >
                     <MessageSquare className="w-4 h-4 text-slate-950" />
-                    <span>Chat with Mitchell on WhatsApp</span>
+                    <span>Chat with Michael on WhatsApp</span>
                   </a>
 
                   <button
@@ -641,13 +641,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({
                   ) : (
                     <>
                       <Send className="w-4 h-4 text-slate-950" />
-                      <span>Send Project Inquiry to Mitchell</span>
+                      <span>Send Project Inquiry to Michael</span>
                     </>
                   )}
                 </button>
 
                 <p className="text-[11px] text-center text-slate-400">
-                  🔒 Strictly confidential. 100% spam-free guarantee. Mitchell responds directly.
+                  🔒 Strictly confidential. 100% spam-free guarantee. Michael responds directly.
                 </p>
 
               </form>

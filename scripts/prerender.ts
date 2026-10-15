@@ -26,16 +26,15 @@ import { SERVICES_DATA, PRICING_PLANS, ADDONS, FAQS, PROJECTS } from '../src/dat
 const SITE = {
   url: 'https://mikky-digitalz.netlify.app',
   brand: 'Mikky Digitalz',
-  personName: 'Mitchell Adetayo',
+  personName: 'Michael Adetayo',
   jobTitle: 'WordPress Website Designer & Elementor Expert',
   logo: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801863/My_real_logo_no_bg_uzbovb.png',
   country: 'NG',
   description:
-    'Mikky Digitalz is the web design studio of Mitchell Adetayo, a WordPress Website Designer and Elementor Expert in Nigeria building fast, responsive websites for startups, organizations and service businesses, with Squarespace and Shopify builds, Figma-to-WordPress conversion and Elementor site rescue.',
+    'Mikky Digitalz is the web design studio of Michael Adetayo, a WordPress Website Designer and Elementor Expert in Nigeria building fast, responsive websites for startups, organizations and service businesses, with Squarespace and Shopify builds, Figma-to-WordPress conversion and Elementor site rescue.',
   // Public profiles. Only list profiles you own; these power entity matching in AI search.
   sameAs: [
     'https://www.linkedin.com/in/mikky-digitalz/',
-    'https://www.upwork.com/freelancers/~016fe1e73c258824d4',
     'https://contra.com/mitchell_adetayo_wxd9nczu',
     'https://www.fiverr.com/mitchell_56',
     'https://www.behance.net/michaeladetayo',
@@ -244,7 +243,7 @@ pages.push({
   route: '/',
   title: `${SITE.brand} — WordPress & Elementor Website Designer | ${SITE.personName}`,
   description:
-    'Mitchell Adetayo (Mikky Digitalz) designs and builds fast, responsive WordPress & Elementor websites, plus Squarespace and Shopify builds, for startups, organizations and service businesses.',
+    'Michael Adetayo (Mikky Digitalz) designs and builds fast, responsive WordPress & Elementor websites, plus Squarespace and Shopify builds, for startups, organizations and service businesses.',
   graph: [
     {
       '@type': 'WebPage',
@@ -272,7 +271,7 @@ pages.push({
   route: '/services',
   title: `WordPress, Elementor, Squarespace & Shopify Website Services | ${SITE.brand}`,
   description:
-    'Custom WordPress & Elementor builds, Squarespace and Shopify websites, Figma-to-WordPress conversion, and rescue of broken or unfinished Elementor sites by Mitchell Adetayo.',
+    'Custom WordPress & Elementor builds, Squarespace and Shopify websites, Figma-to-WordPress conversion, and rescue of broken or unfinished Elementor sites by Michael Adetayo.',
   graph: [
     {
       '@type': 'WebPage',
@@ -298,7 +297,7 @@ pages.push({
   route: '/work',
   title: `Portfolio — WordPress, Elementor & Squarespace Website Projects | ${SITE.brand}`,
   description:
-    'Selected website projects by Mitchell Adetayo (Mikky Digitalz): WordPress & Elementor builds, Squarespace sites, Shopify storefronts and Figma-to-code conversions.',
+    'Selected website projects by Michael Adetayo (Mikky Digitalz): WordPress & Elementor builds, Squarespace sites, Shopify storefronts and Figma-to-code conversions.',
   graph: [
     {
       '@type': 'CollectionPage',
@@ -363,7 +362,7 @@ pages.push({
   route: '/blog',
   title: `Website Design, SEO & GEO Blog | ${SITE.brand}`,
   description:
-    'Practical articles by Mitchell Adetayo on WordPress & Elementor performance, choosing a website platform, Figma-to-code, and getting cited by AI search (GEO & AEO).',
+    'Practical articles by Michael Adetayo on WordPress & Elementor performance, choosing a website platform, Figma-to-code, and getting cited by AI search (GEO & AEO).',
   graph: [
     {
       '@type': 'Blog',

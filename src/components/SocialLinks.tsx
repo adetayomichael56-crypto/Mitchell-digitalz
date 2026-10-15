@@ -7,7 +7,6 @@ interface SocialLinksProps {
 }
 
 const SOCIAL_ITEMS = [
-  { name: 'Upwork', url: 'https://www.upwork.com/freelancers/~016fe1e73c258824d4', badge: '5.0★' },
   { name: 'Contra', url: 'https://contra.com/mitchell_adetayo_wxd9nczu/work' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/mikky-digitalz/' },
   { name: 'Instagram', url: 'https://www.instagram.com/mikkydigitalz/' },
