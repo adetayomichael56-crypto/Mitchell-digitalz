@@ -315,7 +315,6 @@ export default function App() {
         onNavigate={navigateTo}
         onOpenContact={() => handleOpenContact()}
         onOpenCalendly={() => setIsCalendlyOpen(true)}
-        onOpenInbox={() => setIsInboxOpen(true)}
         onOpenSeoAudit={() => setIsSeoAuditOpen(true)}
       />
 

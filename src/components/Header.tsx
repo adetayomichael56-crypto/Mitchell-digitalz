@@ -135,20 +135,17 @@ export const Header: React.FC<HeaderProps> = ({
             <span className="font-bold text-white">{localTime || 'LIVE'}</span>
           </div>
 
-          {/* Inquiry Inbox Trigger (for owner / testing) */}
-          <button
-            onClick={onOpenInbox}
-            className="relative flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold bg-[#130f2e] hover:bg-[#1d1645] text-slate-200 border border-[#261d56] hover:border-purple-500/50 transition-all cursor-pointer shadow-sm"
-            title="Manage client inquiries collected via form"
+          {/* WhatsApp quick contact */}
+          <a
+            href="https://wa.me/2349024877275?text=Hi%20Michael,%20I'd%20like%20to%20discuss%20a%20website%20project%20with%20Mikky%20Digitalz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex items-center gap-2 px-3.5 py-2 rounded-full text-xs font-semibold bg-[#130f2e] hover:bg-[#1d1645] text-slate-200 border border-[#261d56] hover:border-emerald-500/50 transition-all cursor-pointer shadow-sm"
+            title="Chat with Michael on WhatsApp"
           >
-            <Inbox className="w-3.5 h-3.5 text-purple-400" />
-            <span>Inquiry Inbox</span>
-            {inquiryCount > 0 && (
-              <span className="px-1.5 py-0.2 rounded-full text-[10px] bg-purple-600 text-white font-bold leading-none">
-                {inquiryCount}
-              </span>
-            )}
-          </button>
+            <MessageSquare className="w-3.5 h-3.5 text-emerald-400" />
+            <span>Chat on WhatsApp</span>
+          </a>
 
           {/* Book a Call CTA */}
           <button
@@ -162,16 +159,16 @@ export const Header: React.FC<HeaderProps> = ({
 
         {/* Mobile Header Right */}
         <div className="flex lg:hidden items-center gap-2.5">
-          <button
-            onClick={onOpenInbox}
-            className="p-2 rounded-lg bg-[#130f2e] border border-[#261d56] text-purple-400 relative"
-            title="Inquiry Inbox"
+          <a
+            href="https://wa.me/2349024877275?text=Hi%20Michael,%20I'd%20like%20to%20discuss%20a%20website%20project%20with%20Mikky%20Digitalz"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-2 rounded-lg bg-[#130f2e] border border-[#261d56] text-emerald-400"
+            title="Chat on WhatsApp"
+            aria-label="Chat on WhatsApp"
           >
-            <Inbox className="w-4 h-4" />
-            {inquiryCount > 0 && (
-              <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-purple-500 rounded-full" />
-            )}
-          </button>
+            <MessageSquare className="w-4 h-4" />
+          </a>
 
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -270,16 +267,16 @@ export const Header: React.FC<HeaderProps> = ({
                 <ArrowRight className="w-4 h-4" />
               </button>
 
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenInbox();
-                }}
+              <a
+                href="https://wa.me/2349024877275?text=Hi%20Michael,%20I'd%20like%20to%20discuss%20a%20website%20project%20with%20Mikky%20Digitalz"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
                 className="w-full py-2.5 px-4 rounded-full bg-[#181533] border border-[#241d4a] text-slate-300 text-xs font-medium flex items-center justify-center gap-2"
               >
-                <Inbox className="w-4 h-4 text-purple-400" />
-                <span>Inquiry Management Inbox</span>
-              </button>
+                <MessageSquare className="w-4 h-4 text-emerald-400" />
+                <span>Chat on WhatsApp</span>
+              </a>
 
               <div className="pt-2">
                 <span className="block text-[10px] font-bold uppercase tracking-wider text-purple-400 mb-2">
