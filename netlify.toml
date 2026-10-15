@@ -2,7 +2,10 @@
   command = "npm run build"
   publish = "dist"
 
+# Each page is now a real file in dist/ (e.g. dist/services/index.html),
+# so Netlify serves it directly. Unknown URLs get dist/404.html with a real 404 status.
+
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/home"
+  to = "/"
+  status = 301
