@@ -13,11 +13,14 @@ import {
   Sparkles,
   Check,
   TrendingUp,
-  Award
+  Award,
+  Eye,
+  Laptop
 } from 'lucide-react';
 import { PROJECTS, SERVICES_DATA, ProjectItem } from '../data/siteData';
 import { BLOG_POSTS } from '../data/blogData';
 import { SocialLinks } from './SocialLinks';
+import { WebsiteMockupPreview } from './WebsiteMockupPreview';
 
 interface HomePageProps {
   onNavigate: (route: string, subParam?: string) => void;
@@ -102,21 +105,34 @@ export const HomePage: React.FC<HomePageProps> = ({
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3 pt-2">
               <button
                 onClick={onOpenCalendly}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold text-base transition-all duration-150 flex items-center justify-center gap-2 shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50 cursor-pointer hover:scale-105 active:scale-95"
+                className="w-full sm:w-auto px-7 py-3.5 rounded-full bg-purple-600 hover:bg-purple-500 text-white font-semibold text-sm sm:text-base transition-all duration-150 flex items-center justify-center gap-2 shadow-xl shadow-purple-600/35 hover:shadow-purple-500/50 cursor-pointer hover:scale-105 active:scale-95"
               >
                 <span>Book Call on Calendly</span>
-                <ArrowRight className="w-5 h-5" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+              </button>
+
+              <button
+                onClick={() => {
+                  const el = document.getElementById('website-preview');
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#1c1447] text-purple-200 border border-purple-500/40 font-semibold text-sm sm:text-base hover:bg-[#251b5e] hover:text-white hover:border-purple-400 transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer shadow-lg shadow-purple-950/40 group"
+              >
+                <Eye className="w-4 h-4 text-purple-400 group-hover:scale-110 transition-transform" />
+                <span>Live Website Mockup</span>
               </button>
 
               <button
                 onClick={() => onNavigate('work')}
-                className="w-full sm:w-auto px-8 py-4 rounded-full bg-[#110d2c] text-slate-200 border border-[#2c2263] font-semibold text-base hover:bg-[#18123a] hover:text-white hover:border-purple-500/50 transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-full bg-[#110d2c] text-slate-300 border border-[#2c2263] font-semibold text-sm sm:text-base hover:bg-[#18123a] hover:text-white hover:border-purple-500/50 transition-all duration-150 flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
-                <span>Explore Mockups & Work</span>
-                <ArrowRight className="w-5 h-5" />
+                <span>Client Work</span>
+                <ArrowRight className="w-4 h-4" />
               </button>
             </div>
 
@@ -171,6 +187,13 @@ export const HomePage: React.FC<HomePageProps> = ({
 
         </div>
       </section>
+
+      {/* INTERACTIVE WEBSITE MOCKUP & ARCHITECTURE PREVIEW */}
+      <WebsiteMockupPreview
+        onNavigate={onNavigate}
+        onOpenCalendly={onOpenCalendly}
+        onOpenContact={onOpenContact}
+      />
 
       {/* WHAT I BUILD (CORE CAPABILITIES) */}
       <section className="py-20 bg-[#0a081a] border-y border-[#261d56]">

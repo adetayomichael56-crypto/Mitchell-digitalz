@@ -59,6 +59,7 @@ export const Header: React.FC<HeaderProps> = ({
 
   const navLinks = [
     { route: 'home', label: 'Home' },
+    { route: 'preview', label: 'Website Mockup' },
     { route: 'services', label: 'Services' },
     { route: 'work', label: 'Work' },
     { route: 'pricing', label: 'Pricing' },

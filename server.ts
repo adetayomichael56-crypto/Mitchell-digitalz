@@ -438,6 +438,18 @@ async function startServer() {
     res.send('google-site-verification: googlee63b711c38e98de3.html');
   });
 
+  // Website preview mockup image endpoints for OpenGraph & Twitter crawlers
+  app.get(['/website-preview.jpg', '/preview.jpg'], (_req: Request, res: Response) => {
+    const previewPath = path.resolve(__dirname, 'public', 'website-preview.jpg');
+    if (fs.existsSync(previewPath)) {
+      res.setHeader('Content-Type', 'image/jpeg');
+      res.setHeader('Cache-Control', 'public, max-age=86400, stale-while-revalidate=604800');
+      res.sendFile(previewPath);
+    } else {
+      res.status(404).send('Preview image not found');
+    }
+  });
+
   // Setup Vite development server or production static serving
   if (!isProduction) {
     const vite = await createViteServer({

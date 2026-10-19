@@ -56,6 +56,14 @@ export default function App() {
         setCurrentPage('blog');
         setCurrentBlogSlug(undefined);
         return;
+      } else if (path === 'preview') {
+        setCurrentPage('home');
+        setCurrentBlogSlug(undefined);
+        setTimeout(() => {
+          const el = document.getElementById('website-preview');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+        return;
       } else if (['home', 'services', 'work', 'pricing'].includes(path)) {
         setCurrentPage(path);
         setCurrentBlogSlug(undefined);
@@ -63,7 +71,15 @@ export default function App() {
       }
 
       // 2. Check hash fallback
-      if (hash.startsWith('blog/')) {
+      if (hash === 'website-preview' || hash === 'preview') {
+        setCurrentPage('home');
+        setCurrentBlogSlug(undefined);
+        setTimeout(() => {
+          const el = document.getElementById('website-preview');
+          if (el) el.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+        return;
+      } else if (hash.startsWith('blog/')) {
         const slug = hash.replace(/^blog\//, '').trim();
         setCurrentPage('blog');
         setCurrentBlogSlug(slug);
@@ -138,7 +154,20 @@ export default function App() {
     let targetPath = '/';
     let targetHash = '#/home';
 
-    if (page === 'blog' && slug) {
+    if (page === 'preview') {
+      setCurrentPage('home');
+      setCurrentBlogSlug(undefined);
+      try {
+        window.history.pushState(null, '', '/#website-preview');
+      } catch {
+        window.location.hash = '#website-preview';
+      }
+      setTimeout(() => {
+        const el = document.getElementById('website-preview');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 80);
+      return;
+    } else if (page === 'blog' && slug) {
       setCurrentBlogSlug(slug);
       targetPath = `/blog/${slug}`;
       targetHash = `#/blog/${slug}`;
