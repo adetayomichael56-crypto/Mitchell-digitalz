@@ -87,8 +87,8 @@ export const WebsiteMockupPreview: React.FC<WebsiteMockupPreviewProps> = ({
       id: 5,
       x: '38%',
       y: '72%',
-      title: 'Upwork Top Rated Proof Signals',
-      tag: '5.0★ 30 Reviews',
+      title: 'Built-In Trust Signals',
+      tag: 'Social Proof',
       desc: 'Integrated verified trust badges, client testimonial highlights, and social proof that drive 2x higher consultation conversions.',
     },
   ];
@@ -379,14 +379,14 @@ export const WebsiteMockupPreview: React.FC<WebsiteMockupPreviewProps> = ({
                   Websites Built to <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-violet-300 to-purple-200">Convert</span>, Not Just Impress.
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-                  Engineered by Mitchell Adetayo on WordPress, Elementor, Squarespace, and Shopify to turn organic search and AI citations into scheduled client consultations.
+                  Engineered by Michael Adetayo on WordPress, Elementor, Squarespace, and Shopify to turn organic search and AI citations into scheduled client consultations.
                 </p>
 
                 {/* Simulated Metrics Card Grid */}
                 <div className="grid grid-cols-3 gap-3 pt-4 text-center">
                   <div className="p-3 rounded-xl bg-[#110d2c] border border-[#2c2263]">
-                    <div className="text-xl font-extrabold text-white">★ 5.0</div>
-                    <div className="text-[10px] text-slate-400">30 Upwork Reviews</div>
+                    <div className="text-xl font-extrabold text-white">WP</div>
+                    <div className="text-[10px] text-slate-400">Elementor Expert</div>
                   </div>
                   <div className="p-3 rounded-xl bg-[#110d2c] border border-[#2c2263]">
                     <div className="text-xl font-extrabold text-emerald-400">0.6s</div>
@@ -454,7 +454,7 @@ export const WebsiteMockupPreview: React.FC<WebsiteMockupPreviewProps> = ({
                 {/* Mobile Hero Content */}
                 <div className="space-y-3 py-4 text-left">
                   <div className="inline-block px-2.5 py-1 rounded-full bg-purple-500/20 text-purple-300 text-[10px] font-bold">
-                    Upwork Top Rated Web Designer
+                    WordPress & Elementor Designer
                   </div>
                   <h4 className="text-xl font-extrabold leading-tight">
                     Websites Built to Convert, Not Just Impress.
@@ -571,14 +571,14 @@ export const WebsiteMockupPreview: React.FC<WebsiteMockupPreviewProps> = ({
                 </div>
                 <span className="font-semibold text-white">Rating: 5.0</span>
                 <span>•</span>
-                <span>30 Upwork Verified Reviews</span>
+                <span>WordPress & Elementor Builds</span>
                 <span>•</span>
                 <span className="text-emerald-400">Free Consultation Available</span>
               </div>
 
               {/* Description */}
               <p className="text-xs sm:text-sm text-slate-300 leading-relaxed pt-1">
-                Sub-second web engineering and client inquiry systems built for search engines and AI citation by Mitchell Adetayo. Expert in WordPress, Elementor, Squarespace, and Shopify.
+                Sub-second web engineering and client inquiry systems built for search engines and AI citation by Michael Adetayo. Expert in WordPress, Elementor, Squarespace, and Shopify.
               </p>
 
               {/* SERP Sitelinks */}
@@ -670,7 +670,7 @@ export const WebsiteMockupPreview: React.FC<WebsiteMockupPreviewProps> = ({
                   Mikky Digitalz — High-Converting Websites, GEO & AEO Architecture
                 </h4>
                 <p className="text-xs text-slate-300 line-clamp-2">
-                  Sub-second web engineering and client inquiry systems built for search engines and AI citation by Mitchell Adetayo.
+                  Sub-second web engineering and client inquiry systems built for search engines and AI citation by Michael Adetayo.
                 </p>
               </div>
             </div>

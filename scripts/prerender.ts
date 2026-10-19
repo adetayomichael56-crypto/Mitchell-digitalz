@@ -29,6 +29,9 @@ const SITE = {
   personName: 'Michael Adetayo',
   jobTitle: 'WordPress Website Designer & Elementor Expert',
   logo: 'https://res.cloudinary.com/qrnzfn6h/image/upload/v1784801863/My_real_logo_no_bg_uzbovb.png',
+  // Default link-preview image (WhatsApp, LinkedIn, X, Facebook). Lives in public/.
+  shareImage: 'https://mikky-digitalz.netlify.app/website-preview.jpg',
+  shareImageAlt: 'Mikky Digitalz website shown on a laptop and phone',
   country: 'NG',
   description:
     'Mikky Digitalz is the web design studio of Michael Adetayo, a WordPress Website Designer and Elementor Expert in Nigeria building fast, responsive websites for startups, organizations and service businesses, with Squarespace and Shopify builds, Figma-to-WordPress conversion and Elementor site rescue.',
@@ -169,7 +172,7 @@ ${footer()}
 // ---------------------------------------------------------------------------
 function render(page: PageDef): string {
   const url = abs(page.route);
-  const image = page.image || SITE.logo;
+  const image = page.image || SITE.shareImage;
   let html = TEMPLATE;
 
   const setMeta = (attr: 'name' | 'property', key: string, value: string) => {
@@ -189,6 +192,13 @@ function render(page: PageDef): string {
   setMeta('name', 'twitter:title', page.title);
   setMeta('name', 'twitter:description', page.description);
   setMeta('name', 'twitter:image', image);
+  setMeta('name', 'twitter:card', 'summary_large_image');
+  if (!page.image) {
+    setMeta('property', 'og:image:width', '1376');
+    setMeta('property', 'og:image:height', '768');
+    setMeta('property', 'og:image:alt', SITE.shareImageAlt);
+    setMeta('name', 'twitter:image:alt', SITE.shareImageAlt);
+  }
 
   // Replace the template's JSON-LD with the full site graph + this page's nodes.
   const jsonLd = JSON.stringify({ '@context': 'https://schema.org', '@graph': [...baseGraph(), ...page.graph] }, null, 2)
@@ -453,5 +463,34 @@ ${pages
 </urlset>
 `;
 fs.writeFileSync(path.join(DIST, 'sitemap.xml'), sitemap);
+
+// llms.txt: plain-text site summary for AI assistants (https://llmstxt.org)
+const llms = `# ${SITE.brand}
+
+> ${SITE.description}
+
+${SITE.brand} is run by ${SITE.personName}, a ${SITE.jobTitle} based in Nigeria who works with clients worldwide. Contact is through the "Book a Call" form on the site or WhatsApp.
+
+## Services
+${SERVICES_DATA.map((s) => `- [${s.title}](${SITE.url}/services#${s.anchor}): ${s.subtitle}`).join('\n')}
+
+## Pricing
+${PRICING_PLANS.map((p) => `- ${p.name}: ${p.price} — ${p.description}`).join('\n')}
+- Full details and FAQs: ${SITE.url}/pricing
+
+## Articles
+${BLOG_POSTS.map((p) => `- [${p.title}](${SITE.url}/blog/${p.slug}): ${p.summary}`).join('\n')}
+
+## Pages
+- [Home](${SITE.url}/)
+- [Services](${SITE.url}/services)
+- [Portfolio](${SITE.url}/work)
+- [Pricing](${SITE.url}/pricing)
+- [Blog](${SITE.url}/blog)
+
+## Profiles
+${SITE.sameAs.map((u) => `- ${u}`).join('\n')}
+`;
+fs.writeFileSync(path.join(DIST, 'llms.txt'), llms);
 
 console.log(`Pre-rendered ${pages.length} pages:\n${pages.map((p) => `  ${p.route}`).join('\n')}`);
